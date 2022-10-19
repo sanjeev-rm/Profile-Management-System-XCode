@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="140" translatesAutoresizingMaskIntoConstraints="NO" id="nR5-Ty-0q2">
-                                <rect key="frame" x="45" y="339" width="324" height="219"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="140" translatesAutoresizingMaskIntoConstraints="NO" id="nR5-Ty-0q2">
+                                <rect key="frame" x="45" y="338.5" width="324" height="219"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="n45-aJ-mAO">
                                         <rect key="frame" x="0.0" y="0.0" width="324" height="39.5"/>
@@ -90,6 +91,10 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
+                        <constraints>
+                            <constraint firstItem="nR5-Ty-0q2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K8Z-ua-At2"/>
+                            <constraint firstItem="nR5-Ty-0q2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WtQ-bX-jte"/>
+                        </constraints>
                     </view>
                     <connections>
                         <segue destination="1ba-qB-9bi" kind="show" id="Nn9-Mg-7Iv"/>
@@ -107,8 +112,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="72" translatesAutoresizingMaskIntoConstraints="NO" id="TvI-bH-jfz">
-                                <rect key="frame" x="162" y="346" width="90.5" height="151"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="72" translatesAutoresizingMaskIntoConstraints="NO" id="TvI-bH-jfz">
+                                <rect key="frame" x="162" y="345.5" width="90.5" height="151"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcD-pc-ckk">
                                         <rect key="frame" x="0.0" y="0.0" width="90.5" height="39.5"/>
@@ -143,6 +148,10 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="awK-SP-TRl"/>
                         <color key="backgroundColor" name="selectedControlColor" catalog="System" colorSpace="catalog"/>
+                        <constraints>
+                            <constraint firstItem="TvI-bH-jfz" firstAttribute="centerY" secondItem="QVJ-5o-GLt" secondAttribute="centerY" id="TyJ-Yv-cta"/>
+                            <constraint firstItem="TvI-bH-jfz" firstAttribute="centerX" secondItem="QVJ-5o-GLt" secondAttribute="centerX" id="o4G-pP-dFx"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xh0-Ml-bST"/>
                 </viewController>
