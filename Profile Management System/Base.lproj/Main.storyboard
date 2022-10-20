@@ -104,6 +104,9 @@
                     </view>
                     <connections>
                         <segue destination="1ba-qB-9bi" kind="show" id="Nn9-Mg-7Iv"/>
+                        <segue destination="uRQ-gb-dgZ" kind="show" id="zz1-uO-sGd"/>
+                        <segue destination="txv-nC-lwg" kind="show" id="4pb-oY-eJf"/>
+                        <segue destination="MxN-AZ-xP5" kind="show" id="aLx-XG-eYQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -163,7 +166,172 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3fL-IM-lHb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="799" y="-43"/>
+            <point key="canvasLocation" x="1912" y="-1039"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="AH6-cu-jLG">
+            <objects>
+                <viewController id="uRQ-gb-dgZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="csn-Vq-qCZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="72" translatesAutoresizingMaskIntoConstraints="NO" id="RMF-rE-sC5">
+                                <rect key="frame" x="162" y="345.5" width="90.5" height="151"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gY9-6e-S3o">
+                                        <rect key="frame" x="0.0" y="0.0" width="90.5" height="39.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Create">
+                                                    <attributes>
+                                                        <font key="NSFont" size="22" name="Helvetica"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseForegroundColor" red="0.094117648900000003" green="0.19215688110000001" blue="0.2901961207" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1M-DD-TUV">
+                                        <rect key="frame" x="0.0" y="111.5" width="90.5" height="39.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Edit">
+                                                    <attributes>
+                                                        <font key="NSFont" size="22" name="Helvetica"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseForegroundColor" red="0.094117648900000003" green="0.19215688110000001" blue="0.2901961207" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7dN-hX-Ayw"/>
+                        <color key="backgroundColor" name="selectedControlColor" catalog="System" colorSpace="catalog"/>
+                        <constraints>
+                            <constraint firstItem="RMF-rE-sC5" firstAttribute="centerX" secondItem="csn-Vq-qCZ" secondAttribute="centerX" id="WYt-6U-W5w"/>
+                            <constraint firstItem="RMF-rE-sC5" firstAttribute="centerY" secondItem="csn-Vq-qCZ" secondAttribute="centerY" id="f2e-ds-ciH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="GcY-TI-Sew"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A5A-fJ-RJx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1913" y="-338"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RYx-1k-phr">
+            <objects>
+                <viewController id="txv-nC-lwg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h8q-vf-dRl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="72" translatesAutoresizingMaskIntoConstraints="NO" id="np3-GY-vMH">
+                                <rect key="frame" x="162" y="345.5" width="90.5" height="151"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="suT-bM-KZj">
+                                        <rect key="frame" x="0.0" y="0.0" width="90.5" height="39.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Create">
+                                                    <attributes>
+                                                        <font key="NSFont" size="22" name="Helvetica"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseForegroundColor" red="0.094117648900000003" green="0.19215688110000001" blue="0.2901961207" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWz-7s-o5r">
+                                        <rect key="frame" x="0.0" y="111.5" width="90.5" height="39.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Edit">
+                                                    <attributes>
+                                                        <font key="NSFont" size="22" name="Helvetica"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseForegroundColor" red="0.094117648900000003" green="0.19215688110000001" blue="0.2901961207" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0WO-Zu-GB4"/>
+                        <color key="backgroundColor" name="selectedControlColor" catalog="System" colorSpace="catalog"/>
+                        <constraints>
+                            <constraint firstItem="np3-GY-vMH" firstAttribute="centerY" secondItem="h8q-vf-dRl" secondAttribute="centerY" id="XQb-N3-094"/>
+                            <constraint firstItem="np3-GY-vMH" firstAttribute="centerX" secondItem="h8q-vf-dRl" secondAttribute="centerX" id="ubP-qW-a7H"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="HpB-6L-fzS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AdE-jr-FjZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1912" y="347"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="s2g-Ol-ewR">
+            <objects>
+                <viewController id="MxN-AZ-xP5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ziP-b3-OTq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="72" translatesAutoresizingMaskIntoConstraints="NO" id="0xq-Pj-msv">
+                                <rect key="frame" x="162" y="345.5" width="90.5" height="151"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lh-sY-WGn">
+                                        <rect key="frame" x="0.0" y="0.0" width="90.5" height="39.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Create">
+                                                    <attributes>
+                                                        <font key="NSFont" size="22" name="Helvetica"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseForegroundColor" red="0.094117648900000003" green="0.19215688110000001" blue="0.2901961207" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hN-cL-TQI">
+                                        <rect key="frame" x="0.0" y="111.5" width="90.5" height="39.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Edit">
+                                                    <attributes>
+                                                        <font key="NSFont" size="22" name="Helvetica"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseForegroundColor" red="0.094117648900000003" green="0.19215688110000001" blue="0.2901961207" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8nI-4G-L3C"/>
+                        <color key="backgroundColor" name="selectedControlColor" catalog="System" colorSpace="catalog"/>
+                        <constraints>
+                            <constraint firstItem="0xq-Pj-msv" firstAttribute="centerX" secondItem="ziP-b3-OTq" secondAttribute="centerX" id="cbp-xv-LbX"/>
+                            <constraint firstItem="0xq-Pj-msv" firstAttribute="centerY" secondItem="ziP-b3-OTq" secondAttribute="centerY" id="ryW-3k-mA2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Tp2-XG-qGQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6dr-P5-HSn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1912" y="1082"/>
         </scene>
     </scenes>
 </document>
