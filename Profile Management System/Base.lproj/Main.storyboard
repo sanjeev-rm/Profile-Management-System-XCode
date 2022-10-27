@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9w0-5Y-e46">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Profiles-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Profile_Management_System" customModuleProvider="target" sceneMemberID="viewController">
@@ -36,6 +36,9 @@
                                                     <color key="baseForegroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="baseBackgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="tapStudent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T5n-7H-i0i"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OI1-9M-LKN">
                                                 <rect key="frame" x="202" y="0.0" width="122" height="39.5"/>
@@ -52,6 +55,9 @@
                                                     <color key="baseForegroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="baseBackgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="tapFaculty:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Kn-ES-asL"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -73,6 +79,9 @@
                                                     <color key="baseForegroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="baseBackgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="tapEmployee:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oDg-1Y-GlS"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rm-1D-j8a">
                                                 <rect key="frame" x="202" y="0.0" width="122" height="39.5"/>
@@ -89,6 +98,9 @@
                                                     <color key="baseForegroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="baseBackgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="tapAlumni:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h1P-rd-1Op"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -102,27 +114,30 @@
                             <constraint firstItem="nR5-Ty-0q2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WtQ-bX-jte"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Profiles" largeTitleDisplayMode="never" id="ufW-Kb-CYr">
+                        <barButtonItem key="backBarButtonItem" title="Profiles" id="wA8-rg-gdM"/>
+                    </navigationItem>
                     <connections>
-                        <segue destination="1ba-qB-9bi" kind="show" id="Nn9-Mg-7Iv"/>
-                        <segue destination="uRQ-gb-dgZ" kind="show" id="zz1-uO-sGd"/>
-                        <segue destination="txv-nC-lwg" kind="show" id="4pb-oY-eJf"/>
-                        <segue destination="MxN-AZ-xP5" kind="show" id="aLx-XG-eYQ"/>
+                        <segue destination="1ba-qB-9bi" kind="show" identifier="studentSegue" id="Nn9-Mg-7Iv"/>
+                        <segue destination="uRQ-gb-dgZ" kind="show" identifier="facultySegue" id="zz1-uO-sGd"/>
+                        <segue destination="txv-nC-lwg" kind="show" identifier="employeeSegue" id="4pb-oY-eJf"/>
+                        <segue destination="MxN-AZ-xP5" kind="show" identifier="alumniSegue" id="aLx-XG-eYQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="84.375"/>
+            <point key="canvasLocation" x="928.98550724637687" y="84.375"/>
         </scene>
-        <!--View Controller-->
+        <!--Student Profile VC-->
         <scene sceneID="vyq-aJ-9JE">
             <objects>
-                <viewController id="1ba-qB-9bi" sceneMemberID="viewController">
+                <viewController title="Student Profile VC" id="1ba-qB-9bi" customClass="StudentViewController" customModule="Profile_Management_System" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QVJ-5o-GLt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="72" translatesAutoresizingMaskIntoConstraints="NO" id="TvI-bH-jfz">
-                                <rect key="frame" x="162" y="345.5" width="90.5" height="151"/>
+                                <rect key="frame" x="162" y="372.5" width="90.5" height="151"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcD-pc-ckk">
                                         <rect key="frame" x="0.0" y="0.0" width="90.5" height="39.5"/>
@@ -137,6 +152,9 @@
                                             </attributedString>
                                             <color key="baseForegroundColor" red="0.094117648900000003" green="0.19215688110000001" blue="0.2901961207" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tapCreate:" destination="1ba-qB-9bi" eventType="touchUpInside" id="Z6d-B3-fzV"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUI-0X-6LK">
                                         <rect key="frame" x="0.0" y="111.5" width="90.5" height="39.5"/>
@@ -151,6 +169,9 @@
                                             </attributedString>
                                             <color key="baseForegroundColor" red="0.094117648900000003" green="0.19215688110000001" blue="0.2901961207" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tapEdit:" destination="1ba-qB-9bi" eventType="touchUpInside" id="Hn1-Ka-PNh"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -162,22 +183,60 @@
                             <constraint firstItem="TvI-bH-jfz" firstAttribute="centerX" secondItem="QVJ-5o-GLt" secondAttribute="centerX" id="o4G-pP-dFx"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="xh0-Ml-bST"/>
+                    <navigationItem key="navigationItem" title="Student Profile" largeTitleDisplayMode="always" id="xh0-Ml-bST">
+                        <barButtonItem key="backBarButtonItem" title="Student Profile" id="uYD-NA-BRR"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="RRO-3D-tu1" kind="show" identifier="studentCreateSegue" id="a5B-w8-mT9"/>
+                        <segue destination="oPx-et-0Bo" kind="presentation" identifier="studentEditSegue" id="rde-z8-ltP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3fL-IM-lHb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1912" y="-1039"/>
+            <point key="canvasLocation" x="2822" y="-1046"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Profile-->
+        <scene sceneID="Kzf-fD-f47">
+            <objects>
+                <viewController id="RRO-3D-tu1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3fX-kL-nUW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="mam-6Y-fWK"/>
+                        <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Create Profile" id="sjR-bd-o8N"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yC2-8z-Sb0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4693" y="-1765"/>
+        </scene>
+        <!--Edit Profile-->
+        <scene sceneID="mZM-3c-lJ7">
+            <objects>
+                <viewController id="oPx-et-0Bo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l9q-rM-AUi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="HnK-7E-xmf"/>
+                        <color key="backgroundColor" red="0.69411766529999996" green="0.83529412749999998" blue="0.98431372640000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit Profile" id="QOt-8r-G7h"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VyL-HR-Vxf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4693" y="-1105"/>
+        </scene>
+        <!--Faculty Profile VC-->
         <scene sceneID="AH6-cu-jLG">
             <objects>
-                <viewController id="uRQ-gb-dgZ" sceneMemberID="viewController">
+                <viewController title="Faculty Profile VC" id="uRQ-gb-dgZ" customClass="FacultyViewController" customModule="Profile_Management_System" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="csn-Vq-qCZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="72" translatesAutoresizingMaskIntoConstraints="NO" id="RMF-rE-sC5">
-                                <rect key="frame" x="162" y="345.5" width="90.5" height="151"/>
+                                <rect key="frame" x="162" y="372.5" width="90.5" height="151"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gY9-6e-S3o">
                                         <rect key="frame" x="0.0" y="0.0" width="90.5" height="39.5"/>
@@ -192,6 +251,9 @@
                                             </attributedString>
                                             <color key="baseForegroundColor" red="0.094117648900000003" green="0.19215688110000001" blue="0.2901961207" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tapCreate:" destination="uRQ-gb-dgZ" eventType="touchUpInside" id="UX9-3r-JXl"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1M-DD-TUV">
                                         <rect key="frame" x="0.0" y="111.5" width="90.5" height="39.5"/>
@@ -206,6 +268,9 @@
                                             </attributedString>
                                             <color key="baseForegroundColor" red="0.094117648900000003" green="0.19215688110000001" blue="0.2901961207" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tapEdit:" destination="uRQ-gb-dgZ" eventType="touchUpInside" id="sxl-75-uzL"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -217,22 +282,22 @@
                             <constraint firstItem="RMF-rE-sC5" firstAttribute="centerY" secondItem="csn-Vq-qCZ" secondAttribute="centerY" id="f2e-ds-ciH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="GcY-TI-Sew"/>
+                    <navigationItem key="navigationItem" title="Faculty Profile" largeTitleDisplayMode="always" id="GcY-TI-Sew"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A5A-fJ-RJx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1913" y="-338"/>
+            <point key="canvasLocation" x="2821.739130434783" y="-338.16964285714283"/>
         </scene>
-        <!--View Controller-->
+        <!--Employee Profile VC-->
         <scene sceneID="RYx-1k-phr">
             <objects>
-                <viewController id="txv-nC-lwg" sceneMemberID="viewController">
+                <viewController title="Employee Profile VC" id="txv-nC-lwg" customClass="EmployeeViewController" customModule="Profile_Management_System" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h8q-vf-dRl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="72" translatesAutoresizingMaskIntoConstraints="NO" id="np3-GY-vMH">
-                                <rect key="frame" x="162" y="345.5" width="90.5" height="151"/>
+                                <rect key="frame" x="162" y="372.5" width="90.5" height="151"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="suT-bM-KZj">
                                         <rect key="frame" x="0.0" y="0.0" width="90.5" height="39.5"/>
@@ -247,6 +312,9 @@
                                             </attributedString>
                                             <color key="baseForegroundColor" red="0.094117648900000003" green="0.19215688110000001" blue="0.2901961207" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tapCreate:" destination="txv-nC-lwg" eventType="touchUpInside" id="XLa-Mc-BHh"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWz-7s-o5r">
                                         <rect key="frame" x="0.0" y="111.5" width="90.5" height="39.5"/>
@@ -261,6 +329,9 @@
                                             </attributedString>
                                             <color key="baseForegroundColor" red="0.094117648900000003" green="0.19215688110000001" blue="0.2901961207" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tapEdit:" destination="txv-nC-lwg" eventType="touchUpInside" id="6S4-qU-WU9"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -272,22 +343,22 @@
                             <constraint firstItem="np3-GY-vMH" firstAttribute="centerX" secondItem="h8q-vf-dRl" secondAttribute="centerX" id="ubP-qW-a7H"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="HpB-6L-fzS"/>
+                    <navigationItem key="navigationItem" title="Employee Profile" largeTitleDisplayMode="always" id="HpB-6L-fzS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AdE-jr-FjZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1912" y="347"/>
+            <point key="canvasLocation" x="2821.739130434783" y="346.875"/>
         </scene>
-        <!--View Controller-->
+        <!--Alumni Profile VC-->
         <scene sceneID="s2g-Ol-ewR">
             <objects>
-                <viewController id="MxN-AZ-xP5" sceneMemberID="viewController">
+                <viewController title="Alumni Profile VC" id="MxN-AZ-xP5" customClass="AlumniViewController" customModule="Profile_Management_System" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ziP-b3-OTq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="72" translatesAutoresizingMaskIntoConstraints="NO" id="0xq-Pj-msv">
-                                <rect key="frame" x="162" y="345.5" width="90.5" height="151"/>
+                                <rect key="frame" x="162" y="372.5" width="90.5" height="151"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lh-sY-WGn">
                                         <rect key="frame" x="0.0" y="0.0" width="90.5" height="39.5"/>
@@ -302,6 +373,9 @@
                                             </attributedString>
                                             <color key="baseForegroundColor" red="0.094117648900000003" green="0.19215688110000001" blue="0.2901961207" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tapCreate:" destination="MxN-AZ-xP5" eventType="touchUpInside" id="Dnb-cY-Bwr"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hN-cL-TQI">
                                         <rect key="frame" x="0.0" y="111.5" width="90.5" height="39.5"/>
@@ -316,6 +390,9 @@
                                             </attributedString>
                                             <color key="baseForegroundColor" red="0.094117648900000003" green="0.19215688110000001" blue="0.2901961207" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tapEdit:" destination="MxN-AZ-xP5" eventType="touchUpInside" id="1h0-rH-mgh"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -327,11 +404,29 @@
                             <constraint firstItem="0xq-Pj-msv" firstAttribute="centerY" secondItem="ziP-b3-OTq" secondAttribute="centerY" id="ryW-3k-mA2"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Tp2-XG-qGQ"/>
+                    <navigationItem key="navigationItem" title="Alumni Profile" largeTitleDisplayMode="always" id="Tp2-XG-qGQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6dr-P5-HSn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1912" y="1082"/>
+            <point key="canvasLocation" x="2822" y="1108"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EN1-HH-OvG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9w0-5Y-e46" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="DAO-KV-a8u">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="pZW-Pc-XTE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kOi-eZ-5GQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="84.375"/>
         </scene>
     </scenes>
 </document>

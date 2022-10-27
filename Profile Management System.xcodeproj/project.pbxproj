@@ -13,6 +13,10 @@
 		C74C84532900795800FB7754 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C74C84512900795800FB7754 /* Main.storyboard */; };
 		C74C84552900795B00FB7754 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C74C84542900795B00FB7754 /* Assets.xcassets */; };
 		C74C84582900795B00FB7754 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C74C84562900795B00FB7754 /* LaunchScreen.storyboard */; };
+		C78C0FFF290A001F0095BE85 /* FacultyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C0FFE290A001F0095BE85 /* FacultyViewController.swift */; };
+		C78C1001290A00E70095BE85 /* StudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C1000290A00E70095BE85 /* StudentViewController.swift */; };
+		C78C1003290A03010095BE85 /* EmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C1002290A03010095BE85 /* EmployeeViewController.swift */; };
+		C78C1005290A031B0095BE85 /* AlumniViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C1004290A031B0095BE85 /* AlumniViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		C74C84542900795B00FB7754 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C74C84572900795B00FB7754 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C74C84592900795B00FB7754 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C78C0FFE290A001F0095BE85 /* FacultyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacultyViewController.swift; sourceTree = "<group>"; };
+		C78C1000290A00E70095BE85 /* StudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentViewController.swift; sourceTree = "<group>"; };
+		C78C1002290A03010095BE85 /* EmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewController.swift; sourceTree = "<group>"; };
+		C78C1004290A031B0095BE85 /* AlumniViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlumniViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +71,20 @@
 				C74C84542900795B00FB7754 /* Assets.xcassets */,
 				C74C84562900795B00FB7754 /* LaunchScreen.storyboard */,
 				C74C84592900795B00FB7754 /* Info.plist */,
+				C78C1007290A1A680095BE85 /* Profile VCs */,
 			);
 			path = "Profile Management System";
+			sourceTree = "<group>";
+		};
+		C78C1007290A1A680095BE85 /* Profile VCs */ = {
+			isa = PBXGroup;
+			children = (
+				C78C1000290A00E70095BE85 /* StudentViewController.swift */,
+				C78C0FFE290A001F0095BE85 /* FacultyViewController.swift */,
+				C78C1002290A03010095BE85 /* EmployeeViewController.swift */,
+				C78C1004290A031B0095BE85 /* AlumniViewController.swift */,
+			);
+			path = "Profile VCs";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +158,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C78C1001290A00E70095BE85 /* StudentViewController.swift in Sources */,
+				C78C0FFF290A001F0095BE85 /* FacultyViewController.swift in Sources */,
 				C74C84502900795800FB7754 /* ViewController.swift in Sources */,
 				C74C844C2900795800FB7754 /* AppDelegate.swift in Sources */,
+				C78C1003290A03010095BE85 /* EmployeeViewController.swift in Sources */,
 				C74C844E2900795800FB7754 /* SceneDelegate.swift in Sources */,
+				C78C1005290A031B0095BE85 /* AlumniViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
