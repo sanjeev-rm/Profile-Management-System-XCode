@@ -17,6 +17,10 @@
 		C78C1001290A00E70095BE85 /* StudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C1000290A00E70095BE85 /* StudentViewController.swift */; };
 		C78C1003290A03010095BE85 /* EmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C1002290A03010095BE85 /* EmployeeViewController.swift */; };
 		C78C1005290A031B0095BE85 /* AlumniViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C1004290A031B0095BE85 /* AlumniViewController.swift */; };
+		C78C1009290B99BB0095BE85 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C1008290B99BB0095BE85 /* Person.swift */; };
+		C78C100B290BA8AA0095BE85 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C100A290BA8AA0095BE85 /* Student.swift */; };
+		C78C100D290BAFC00095BE85 /* StudentCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C100C290BAFC00095BE85 /* StudentCreateViewController.swift */; };
+		C78C1014290BBBA00095BE85 /* StudentEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C1013290BBBA00095BE85 /* StudentEditViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		C78C1000290A00E70095BE85 /* StudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentViewController.swift; sourceTree = "<group>"; };
 		C78C1002290A03010095BE85 /* EmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewController.swift; sourceTree = "<group>"; };
 		C78C1004290A031B0095BE85 /* AlumniViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlumniViewController.swift; sourceTree = "<group>"; };
+		C78C1008290B99BB0095BE85 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		C78C100A290BA8AA0095BE85 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		C78C100C290BAFC00095BE85 /* StudentCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentCreateViewController.swift; sourceTree = "<group>"; };
+		C78C1013290BBBA00095BE85 /* StudentEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentEditViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,7 @@
 				C74C84562900795B00FB7754 /* LaunchScreen.storyboard */,
 				C74C84592900795B00FB7754 /* Info.plist */,
 				C78C1007290A1A680095BE85 /* Profile VCs */,
+				C78C1012290BB0820095BE85 /* Profiles */,
 			);
 			path = "Profile Management System";
 			sourceTree = "<group>";
@@ -79,12 +88,55 @@
 		C78C1007290A1A680095BE85 /* Profile VCs */ = {
 			isa = PBXGroup;
 			children = (
-				C78C1000290A00E70095BE85 /* StudentViewController.swift */,
-				C78C0FFE290A001F0095BE85 /* FacultyViewController.swift */,
-				C78C1002290A03010095BE85 /* EmployeeViewController.swift */,
-				C78C1004290A031B0095BE85 /* AlumniViewController.swift */,
+				C78C100E290BAFD10095BE85 /* Student VCs */,
+				C78C100F290BAFF70095BE85 /* Faculty VCs */,
+				C78C1010290BB0480095BE85 /* Employee VCs */,
+				C78C1011290BB0550095BE85 /* Alumni VCs */,
 			);
 			path = "Profile VCs";
+			sourceTree = "<group>";
+		};
+		C78C100E290BAFD10095BE85 /* Student VCs */ = {
+			isa = PBXGroup;
+			children = (
+				C78C1000290A00E70095BE85 /* StudentViewController.swift */,
+				C78C100C290BAFC00095BE85 /* StudentCreateViewController.swift */,
+				C78C1013290BBBA00095BE85 /* StudentEditViewController.swift */,
+			);
+			path = "Student VCs";
+			sourceTree = "<group>";
+		};
+		C78C100F290BAFF70095BE85 /* Faculty VCs */ = {
+			isa = PBXGroup;
+			children = (
+				C78C0FFE290A001F0095BE85 /* FacultyViewController.swift */,
+			);
+			path = "Faculty VCs";
+			sourceTree = "<group>";
+		};
+		C78C1010290BB0480095BE85 /* Employee VCs */ = {
+			isa = PBXGroup;
+			children = (
+				C78C1002290A03010095BE85 /* EmployeeViewController.swift */,
+			);
+			path = "Employee VCs";
+			sourceTree = "<group>";
+		};
+		C78C1011290BB0550095BE85 /* Alumni VCs */ = {
+			isa = PBXGroup;
+			children = (
+				C78C1004290A031B0095BE85 /* AlumniViewController.swift */,
+			);
+			path = "Alumni VCs";
+			sourceTree = "<group>";
+		};
+		C78C1012290BB0820095BE85 /* Profiles */ = {
+			isa = PBXGroup;
+			children = (
+				C78C1008290B99BB0095BE85 /* Person.swift */,
+				C78C100A290BA8AA0095BE85 /* Student.swift */,
+			);
+			path = Profiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,12 +210,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C78C100D290BAFC00095BE85 /* StudentCreateViewController.swift in Sources */,
 				C78C1001290A00E70095BE85 /* StudentViewController.swift in Sources */,
 				C78C0FFF290A001F0095BE85 /* FacultyViewController.swift in Sources */,
 				C74C84502900795800FB7754 /* ViewController.swift in Sources */,
 				C74C844C2900795800FB7754 /* AppDelegate.swift in Sources */,
+				C78C1014290BBBA00095BE85 /* StudentEditViewController.swift in Sources */,
+				C78C100B290BA8AA0095BE85 /* Student.swift in Sources */,
 				C78C1003290A03010095BE85 /* EmployeeViewController.swift in Sources */,
 				C74C844E2900795800FB7754 /* SceneDelegate.swift in Sources */,
+				C78C1009290B99BB0095BE85 /* Person.swift in Sources */,
 				C78C1005290A031B0095BE85 /* AlumniViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
