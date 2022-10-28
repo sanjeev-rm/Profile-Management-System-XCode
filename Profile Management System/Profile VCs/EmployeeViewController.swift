@@ -9,9 +9,14 @@ import UIKit
 
 class EmployeeViewController: UIViewController {
 
-    @IBAction func tapCreate(_ sender: UIButton) {
+    @IBAction func tapCreate(_ sender: UIButton)
+    {
+        performSegue(withIdentifier: "employeeCreateSegue", sender: self)
     }
-    @IBAction func tapEdit(_ sender: UIButton) {
+    
+    @IBAction func tapEdit(_ sender: UIButton)
+    {
+        performSegue(withIdentifier: "employeeEditSegue", sender: self)
     }
     override func viewDidLoad() {
         super.viewDidLoad()

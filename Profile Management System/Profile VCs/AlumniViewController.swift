@@ -9,9 +9,14 @@ import UIKit
 
 class AlumniViewController: UIViewController {
 
-    @IBAction func tapCreate(_ sender: UIButton) {
+    @IBAction func tapCreate(_ sender: UIButton)
+    {
+        performSegue(withIdentifier: "alumniCreateSegue", sender: self)
     }
-    @IBAction func tapEdit(_ sender: UIButton) {
+    
+    @IBAction func tapEdit(_ sender: UIButton)
+    {
+        performSegue(withIdentifier: "alumniEditSegue", sender: self)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
