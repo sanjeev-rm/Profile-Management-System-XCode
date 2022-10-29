@@ -50,7 +50,7 @@ class StudentCreateViewController: UIViewController {
     /// If all the field are filled returns false.
     func isAnyFieldEmpty() -> Bool
     {
-        if(firstNameTF.hasText && middleNameTF.hasText && lastNameTF.hasText && genderTF.hasText && dobYearTF.hasText && dobMonthTF.hasText && dobDayTF.hasText && emailTF.hasText && mobileTF.hasText && houseNoTF.hasText && areaTF.hasText && cityTF.hasText && stateTF.hasText && countryTF.hasText && pincodeTF.hasText)
+        if(firstNameTF.hasText && middleNameTF.hasText && lastNameTF.hasText && genderTF.hasText && dobYearTF.hasText && dobMonthTF.hasText && dobDayTF.hasText && emailTF.hasText && mobileTF.hasText && houseNoTF.hasText && areaTF.hasText && cityTF.hasText && stateTF.hasText && countryTF.hasText && pincodeTF.hasText && registrationNoTF.hasText && programTF.hasText && branchTF.hasText && schoolTF.hasText && isHostellerTF.hasText && graduatingYearTF.hasText)
         {
             return false
         }
