@@ -19,6 +19,8 @@ class StudentEditViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    
     /// Function that fires when button Enter is clicked.
     /// This function first checks if the registrationNumber text field has a text.
     /// If Yes then compares the registration eneter by the user to all the student profiles in the students array. If the registration number matches then performs segue. If none matches then shows message "No Such Profile".

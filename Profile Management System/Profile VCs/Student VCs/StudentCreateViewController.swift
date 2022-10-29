@@ -45,6 +45,8 @@ class StudentCreateViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    
     /// This function checks if any of the field is empty.
     /// If any field is empty returns true.
     /// If all the field are filled returns false.
@@ -57,6 +59,11 @@ class StudentCreateViewController: UIViewController {
         return true
     }
     
+    
+    
+    /// This function creates a student profile and returns it.
+    /// It creates an instance of Student and returns it.
+    // This function is called when the Create button is clicked and the user has filled all the text fields.
     func createStudentProfile() -> Student
     {
         /* ! --> is used to abort execution if the string value is nil.
@@ -83,6 +90,7 @@ class StudentCreateViewController: UIViewController {
                                                     country: countryTF.text!,
                                                     pincode: pincodeTF.text!)
         
+        // This is defining and initializing an variable according to a condition.
         var studentIsHosteller : String
         {
             if(isHostellerTF.text == "Y" || isHostellerTF.text == "y" || isHostellerTF.text == "yes" || isHostellerTF.text == "YES" || isHostellerTF.text == "Yes")
@@ -92,6 +100,7 @@ class StudentCreateViewController: UIViewController {
             return "NO"
         }
         
+        // returning an instance of Student.
         return Student.init(Name: studentName,
                             Gender: genderTF.text!,
                             DateOfBirth: studentDob,
@@ -105,6 +114,8 @@ class StudentCreateViewController: UIViewController {
                             IsHosteller: studentIsHosteller,
                             YearOfGraduation: Int(dobYearTF.text!) ?? 0)
     }
+    
+    
     
     /// This function is fired when the create button is clicked.
     /// Changes the message text field's text to "All fields are compulsory" if any of the fields is empty.
