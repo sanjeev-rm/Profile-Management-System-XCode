@@ -37,7 +37,7 @@ class StudentCreateViewController: UIViewController {
     @IBOutlet weak var isHostellerTF: UITextField!
     @IBOutlet weak var graduatingYearTF: UITextField!
     
-    @IBOutlet weak var messageTF: UILabel!
+    @IBOutlet weak var messageLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -113,7 +113,7 @@ class StudentCreateViewController: UIViewController {
     {
         if(isAnyFieldEmpty())
         {
-            messageTF.text = "All fields are compulsory"
+            messageLabel.text = "All fields are compulsory"
         }
         else
         {
