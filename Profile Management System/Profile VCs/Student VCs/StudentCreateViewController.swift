@@ -30,9 +30,14 @@ class StudentCreateViewController: UIViewController {
     @IBOutlet weak var countryTF: UITextField!
     @IBOutlet weak var pincodeTF: UITextField!
     
-    @IBOutlet weak var messageTF: UILabel!
+    @IBOutlet weak var registrationNoTF: UITextField!
+    @IBOutlet weak var programTF: UITextField!
+    @IBOutlet weak var branchTF: UITextField!
+    @IBOutlet weak var schoolTF: UITextField!
+    @IBOutlet weak var isHostellerTF: UITextField!
+    @IBOutlet weak var graduatingYearTF: UITextField!
     
-    var students : [Student] = []
+    @IBOutlet weak var messageTF: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,20 +45,79 @@ class StudentCreateViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    /// This function checks if any of the field is empty.
+    /// If any field is empty returns true.
+    /// If all the field are filled returns false.
     func isAnyFieldEmpty() -> Bool
     {
         if(firstNameTF.hasText && middleNameTF.hasText && lastNameTF.hasText && genderTF.hasText && dobYearTF.hasText && dobMonthTF.hasText && dobDayTF.hasText && emailTF.hasText && mobileTF.hasText && houseNoTF.hasText && areaTF.hasText && cityTF.hasText && stateTF.hasText && countryTF.hasText && pincodeTF.hasText)
         {
             return false
         }
-        messageTF.text = "All fields are compulsory"
         return true
     }
     
+    func createStudentProfile() -> Student
+    {
+        /* ! --> is used to abort execution if the string value is nil.
+         * ?? --> is used to send an default value if the value we are trying to send (text) is nil.
+         * ?? is used when we are sending an optional i.e. it might be nil  or some value. To handle this we use this ?? and set an default value.
+         */
+        /* We are using this ! to abosrt execution if the return value is nil.
+         * Because we know that the text is never going to be nil.
+         * As this function won't even be called in the first plae even if any one of the fields is empty.
+         */
+        
+        let studentName : Name = Name.init(firstName: firstNameTF.text!,
+                                           middleName: middleNameTF.text!,
+                                           lastName: lastNameTF.text!)
+        
+        let studentDob : Date = Date.init(year: Int(dobYearTF.text!) ?? 0,
+                                          month: Int(dobMonthTF.text!) ?? 0,
+                                          day: Int(dobDayTF.text!) ?? 0)
+        
+        let studentAddress : Address = Address.init(houseNo: houseNoTF.text!,
+                                                    area: areaTF.text!,
+                                                    city: cityTF.text!,
+                                                    state: stateTF.text!,
+                                                    country: countryTF.text!,
+                                                    pincode: pincodeTF.text!)
+        
+        var studentIsHosteller : String
+        {
+            if(isHostellerTF.text == "Y" || isHostellerTF.text == "y" || isHostellerTF.text == "yes" || isHostellerTF.text == "YES" || isHostellerTF.text == "Yes")
+            {
+                return "YES"
+            }
+            return "NO"
+        }
+        
+        return Student.init(Name: studentName,
+                            Gender: genderTF.text!,
+                            DateOfBirth: studentDob,
+                            Email: emailTF.text!,
+                            MobileNumber: mobileTF.text!,
+                            Address: studentAddress,
+                            RegistrationNumber: registrationNoTF.text!,
+                            Program: programTF.text!,
+                            Branch: branchTF.text!,
+                            School: schoolTF.text!,
+                            IsHosteller: studentIsHosteller,
+                            YearOfGraduation: Int(dobYearTF.text!) ?? 0)
+    }
+    
+    /// This function is fired when the create button is clicked.
+    /// Changes the message text field's text to "All fields are compulsory" if any of the fields is empty.
+    /// If all the fields are filled then performs segue to the profile created VC scene.
     @IBAction func tapCreate(_ sender: UIButton)
     {
-        if(!isAnyFieldEmpty())
+        if(isAnyFieldEmpty())
         {
+            messageTF.text = "All fields are compulsory"
+        }
+        else
+        {
+            students.append(createStudentProfile())
             performSegue(withIdentifier: "studentCreatedSegue", sender: self)
         }
     }

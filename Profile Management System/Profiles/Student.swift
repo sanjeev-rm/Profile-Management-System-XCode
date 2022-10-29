@@ -14,12 +14,12 @@ class Student : Person
     private var program : String
     private var branch : String
     private var school : String
-    private var isHosteller : Bool
+    private var isHosteller : String
     private var yearOfGraduation : Int
     
     // Here in swift super class's initializer(constructor) should come after the child class's initializer(constructor).
     // Unlike in java where the super class's constructor comes first then the child class's properties are initialized.
-    init(Name name : Name, Gender gender : String, DateOfBirth dob : Date, Email email : String, MobileNumber  mobile : String, Address address : Address, RegistrationNumber registrationNumber : String, Program program : String, Branch branch : String, School school : String, IsHosteller isHosteller : Bool, YearOfGraduation yearOfGraduation : Int)
+    init(Name name : Name, Gender gender : String, DateOfBirth dob : Date, Email email : String, MobileNumber  mobile : String, Address address : Address, RegistrationNumber registrationNumber : String, Program program : String, Branch branch : String, School school : String, IsHosteller isHosteller : String, YearOfGraduation yearOfGraduation : Int)
     {
         self.registrationNumber = registrationNumber
         self.program = program
@@ -70,12 +70,12 @@ class Student : Person
         return self.school
     }
     
-    func setIsHosteller(isHosteller : Bool)
+    func setIsHosteller(isHosteller : String)
     {
         self.isHosteller = isHosteller
     }
     
-    func getIsHosteller() -> Bool
+    func getIsHosteller() -> String
     {
         return self.isHosteller
     }

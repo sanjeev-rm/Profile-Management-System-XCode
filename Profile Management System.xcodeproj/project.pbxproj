@@ -21,6 +21,7 @@
 		C78C100B290BA8AA0095BE85 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C100A290BA8AA0095BE85 /* Student.swift */; };
 		C78C100D290BAFC00095BE85 /* StudentCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C100C290BAFC00095BE85 /* StudentCreateViewController.swift */; };
 		C78C1014290BBBA00095BE85 /* StudentEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C1013290BBBA00095BE85 /* StudentEditViewController.swift */; };
+		C78C1018290CC37A0095BE85 /* CreatedProfiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C1017290CC37A0095BE85 /* CreatedProfiles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		C78C100A290BA8AA0095BE85 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		C78C100C290BAFC00095BE85 /* StudentCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentCreateViewController.swift; sourceTree = "<group>"; };
 		C78C1013290BBBA00095BE85 /* StudentEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentEditViewController.swift; sourceTree = "<group>"; };
+		C78C1017290CC37A0095BE85 /* CreatedProfiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedProfiles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				C74C84592900795B00FB7754 /* Info.plist */,
 				C78C1007290A1A680095BE85 /* Profile VCs */,
 				C78C1012290BB0820095BE85 /* Profiles */,
+				C78C1017290CC37A0095BE85 /* CreatedProfiles.swift */,
 			);
 			path = "Profile Management System";
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				C78C1014290BBBA00095BE85 /* StudentEditViewController.swift in Sources */,
 				C78C100B290BA8AA0095BE85 /* Student.swift in Sources */,
 				C78C1003290A03010095BE85 /* EmployeeViewController.swift in Sources */,
+				C78C1018290CC37A0095BE85 /* CreatedProfiles.swift in Sources */,
 				C74C844E2900795800FB7754 /* SceneDelegate.swift in Sources */,
 				C78C1009290B99BB0095BE85 /* Person.swift in Sources */,
 				C78C1005290A031B0095BE85 /* AlumniViewController.swift in Sources */,
