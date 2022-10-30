@@ -16,18 +16,18 @@ class Student : Person
     private var branch : String
     private var school : String
     private var isHosteller : String
-    private var yearOfGraduation : Int
+    private var graduatingYear : Int
     
     // Here in swift super class's initializer(constructor) should come after the child class's initializer(constructor).
     // Unlike in java where the super class's constructor comes first then the child class's properties are initialized.
-    init(Name name : Name, Gender gender : String, DateOfBirth dob : Date, Email email : String, MobileNumber  mobile : String, Address address : Address, RegistrationNumber registrationNumber : String, Program program : String, Branch branch : String, School school : String, IsHosteller isHosteller : String, YearOfGraduation yearOfGraduation : Int)
+    init(Name name : Name, Gender gender : String, DateOfBirth dob : Date, Email email : String, MobileNumber  mobile : String, Address address : Address, RegistrationNumber registrationNumber : String, Program program : String, Branch branch : String, School school : String, IsHosteller isHosteller : String, graduatingYear graduatingYear : Int)
     {
         self.registrationNumber = registrationNumber
         self.program = program
         self.branch = branch
         self.school = school
         self.isHosteller = isHosteller
-        self.yearOfGraduation = yearOfGraduation
+        self.graduatingYear = graduatingYear
         super.init(Name: name, Gender: gender, DateOfBirth: dob, Email: email, MobileNumber: mobile, Address: address)
     }
     
@@ -81,13 +81,13 @@ class Student : Person
         return self.isHosteller
     }
     
-    func setYearOfGraduation(yearOfGraduation : Int)
+    func setGraduatingYear(graduatingYear : Int)
     {
-        self.yearOfGraduation = yearOfGraduation
+        self.graduatingYear = graduatingYear
     }
     
-    func getYearOfGraduation() -> Int
+    func getGraduatingYear() -> Int
     {
-        return self.yearOfGraduation
+        return self.graduatingYear
     }
 }

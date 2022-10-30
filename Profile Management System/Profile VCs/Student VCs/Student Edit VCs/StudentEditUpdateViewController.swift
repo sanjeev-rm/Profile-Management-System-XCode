@@ -1,5 +1,5 @@
 //
-//  StudentEditOptionViewController.swift
+//  StudentEditUpdateViewController.swift
 //  Profile Management System
 //
 //  Created by Sanjeev RM on 30/10/22.
@@ -7,14 +7,15 @@
 
 import UIKit
 
-class StudentEditOptionViewController: UIViewController {
-   
+class StudentEditUpdateViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+
     /*
     // MARK: - Navigation
 

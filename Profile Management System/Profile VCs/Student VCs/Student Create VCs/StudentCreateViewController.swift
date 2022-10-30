@@ -112,7 +112,7 @@ class StudentCreateViewController: UIViewController {
                             Branch: branchTF.text!,
                             School: schoolTF.text!,
                             IsHosteller: studentIsHosteller,
-                            YearOfGraduation: Int(dobYearTF.text!) ?? 0)
+                            graduatingYear: Int(graduatingYearTF.text!) ?? 0)
     }
     
     

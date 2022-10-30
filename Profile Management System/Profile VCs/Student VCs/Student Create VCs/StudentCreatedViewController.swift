@@ -22,17 +22,16 @@ class StudentCreatedViewController: UIViewController {
     @IBOutlet weak var hostellerLabel: UILabel!
     @IBOutlet weak var graduatingYearLabel: UILabel!
     
+    /*Using ! which means that the interpreter will abort execution if the optional value is nil.
+     * Here we are using this because we know that it will never be nil. As a profile won't even be created even if any one field is empty. and the students array will contain only Students profile with all the information filled.
+     * Therefore we can use ! instead of ?? as no need to give an default value as we know it won't be nil.
+     */
     /// latestStudent is the latest student profile that has been created.
     let latestStudent : Student = students.last!
     
     /// This function updates all the labels with info of the profile just created.
     func updateLabels()
     {
-        /*Using ! which means that the interpreter will abort execution if the optional value is nil.
-         * Here we are using this because we know that it will never be nil. As a profile won't even be created even if any one field is empty. and the students array will contain only Students profile with all the information filled.
-         * Therefore we can use ! instead of ?? as no need to give an default value as we know it won't be nil.
-         */
-        
         nameLabel.text = latestStudent.getName().toString()
         genderLabel.text = latestStudent.getGender()
         dobLabel.text = latestStudent.getDob().toString()
@@ -44,7 +43,7 @@ class StudentCreatedViewController: UIViewController {
         branchLabel.text = latestStudent.getBranch()
         schoolLabel.text = latestStudent.getSchool()
         hostellerLabel.text = latestStudent.getIsHosteller()
-        graduatingYearLabel.text = String(latestStudent.getYearOfGraduation())
+        graduatingYearLabel.text = String(latestStudent.getGraduatingYear())
     }
     
     override func viewDidLoad() {

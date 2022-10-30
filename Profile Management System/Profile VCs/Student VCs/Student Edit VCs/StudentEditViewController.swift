@@ -29,13 +29,16 @@ class StudentEditViewController: UIViewController {
     {
         if(registrationNumberTF.hasText)
         {
+            var index = 0
             for student in students
             {
                 if(student.getRegistrationNumber() == registrationNumberTF.text)
                 {
-                    performSegue(withIdentifier: "studentEditOptionSegue", sender: self)
+                    indexOfStudentProfileToEdit = index
+                    performSegue(withIdentifier: "studentEditUpdateSegue", sender: self)
                     return
                 }
+                index += 1
             }
             messageLabel.text = "No Such Profile"
         }

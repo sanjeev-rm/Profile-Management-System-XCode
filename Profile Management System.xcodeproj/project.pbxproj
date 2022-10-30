@@ -26,7 +26,7 @@
 		C78C1024290E4A420095BE85 /* Faculty.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C1023290E4A420095BE85 /* Faculty.swift */; };
 		C78C1026290E4A540095BE85 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C1025290E4A540095BE85 /* Employee.swift */; };
 		C78C1028290E4A670095BE85 /* Alumni.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C1027290E4A670095BE85 /* Alumni.swift */; };
-		C78C102A290E4B800095BE85 /* StudentEditOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C1029290E4B800095BE85 /* StudentEditOptionViewController.swift */; };
+		C78C102E290E7EC40095BE85 /* StudentEditUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C102D290E7EC40095BE85 /* StudentEditUpdateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +51,7 @@
 		C78C1023290E4A420095BE85 /* Faculty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Faculty.swift; sourceTree = "<group>"; };
 		C78C1025290E4A540095BE85 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		C78C1027290E4A670095BE85 /* Alumni.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alumni.swift; sourceTree = "<group>"; };
-		C78C1029290E4B800095BE85 /* StudentEditOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentEditOptionViewController.swift; sourceTree = "<group>"; };
+		C78C102D290E7EC40095BE85 /* StudentEditUpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentEditUpdateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,8 +164,8 @@
 		C78C101B290E492F0095BE85 /* Student Create VCs */ = {
 			isa = PBXGroup;
 			children = (
-				C78C1019290E2D020095BE85 /* StudentCreatedViewController.swift */,
 				C78C100C290BAFC00095BE85 /* StudentCreateViewController.swift */,
+				C78C1019290E2D020095BE85 /* StudentCreatedViewController.swift */,
 			);
 			path = "Student Create VCs";
 			sourceTree = "<group>";
@@ -174,7 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				C78C1013290BBBA00095BE85 /* StudentEditViewController.swift */,
-				C78C1029290E4B800095BE85 /* StudentEditOptionViewController.swift */,
+				C78C102D290E7EC40095BE85 /* StudentEditUpdateViewController.swift */,
 			);
 			path = "Student Edit VCs";
 			sourceTree = "<group>";
@@ -294,11 +294,11 @@
 			files = (
 				C78C100D290BAFC00095BE85 /* StudentCreateViewController.swift in Sources */,
 				C78C1001290A00E70095BE85 /* StudentViewController.swift in Sources */,
+				C78C102E290E7EC40095BE85 /* StudentEditUpdateViewController.swift in Sources */,
 				C78C0FFF290A001F0095BE85 /* FacultyViewController.swift in Sources */,
 				C74C84502900795800FB7754 /* ViewController.swift in Sources */,
 				C74C844C2900795800FB7754 /* AppDelegate.swift in Sources */,
 				C78C1014290BBBA00095BE85 /* StudentEditViewController.swift in Sources */,
-				C78C102A290E4B800095BE85 /* StudentEditOptionViewController.swift in Sources */,
 				C78C100B290BA8AA0095BE85 /* Student.swift in Sources */,
 				C78C1003290A03010095BE85 /* EmployeeViewController.swift in Sources */,
 				C78C1018290CC37A0095BE85 /* CreatedProfiles.swift in Sources */,
