@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+/// This class represents an student of VIT.
 class Student : Person
 {
     private var registrationNumber : String

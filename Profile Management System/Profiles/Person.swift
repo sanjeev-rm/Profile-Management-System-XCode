@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// This is the structure of Name of a person.
 struct Name
 {
     private var firstName : String
@@ -20,12 +21,46 @@ struct Name
         self.lastName = lastName
     }
     
+    // Have to use the keyword mutating inside structures.
+    mutating func setFirstName(firstName : String)
+    {
+        self.firstName = firstName
+    }
+    
+    func getFirstName() -> String
+    {
+        return self.firstName
+    }
+    
+    mutating func setMiddleName(middleName : String)
+    {
+        self.middleName = middleName
+    }
+    
+    func getMiddleName() -> String
+    {
+        return self.middleName
+    }
+    
+    mutating func setLastName(lastName : String)
+    {
+        self.lastName = lastName
+    }
+    
+    func getLastName() -> String
+    {
+        return self.lastName
+    }
+    
+    /// Function to return an instance of Name in string format.
+    /// It's like the toString() in java.
     func toString() -> String
     {
         return "\(self.firstName) \(self.middleName) \(self.lastName)"
     }
 }
 
+/// This is the structure of a date.
 struct Date
 {
     private var year : Int
@@ -45,6 +80,7 @@ struct Date
     }
 }
 
+/// This is the structure of an Address of a place.
 struct Address
 {
     private var houseNo : String
@@ -70,6 +106,7 @@ struct Address
     }
 }
 
+/// This class represents information of an person.
 class Person
 {
     private var name : Name
