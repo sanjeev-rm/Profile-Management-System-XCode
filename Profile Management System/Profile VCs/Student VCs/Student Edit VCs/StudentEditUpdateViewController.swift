@@ -74,7 +74,7 @@ class StudentEditUpdateViewController: UIViewController {
         
         studentToEdit.setGender(gender: genderTF.text!)
         
-        studentToEdit.setDob(dob: Date.init(YearString: dobYearTF.text!,
+        studentToEdit.setDob(dob: try! Date.init(YearString: dobYearTF.text!,
                                             MonthString: dobMonthTF.text!,
                                             DayString: dobDayTF.text!))
         

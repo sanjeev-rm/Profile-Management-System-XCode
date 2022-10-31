@@ -61,6 +61,50 @@ class StudentCreateViewController: UIViewController {
     
     
     
+    /// This function checks if there are any errors in the fields entries.
+    /// If there are errors it shows error message in the view. And returns true.
+    /// If no errors returns false.
+    func showErrorIfAny() -> Bool
+    {
+        var isError = true
+        
+        do
+        {
+            try Date.init(YearString: dobYearTF.text!, MonthString: dobMonthTF.text!, DayString: dobDayTF.text!)
+            isError = false
+        }
+        catch CommonError.typeMismatchError
+        {
+            messageLabel.text = "Please enter only integers for DOB"
+        }
+        catch DateError.invalidYearError
+        {
+            dobYearTF.text = ""
+            dobYearTF.placeholder = "Invalid Year [Minimum : 100]"
+            messageLabel.text = "Please check your DOB inputs"
+        }
+        catch DateError.invalidMonthError
+        {
+            dobMonthTF.text = ""
+            dobMonthTF.placeholder = "Invalid Month [valid : 1 - 12]"
+            messageLabel.text = "Please check your DOB inputs"
+        }
+        catch DateError.invalidDayError
+        {
+            dobDayTF.text = ""
+            dobDayTF.placeholder = "Invalid Day [valid : 1 - 31 / 29]"
+            messageLabel.text = "Please check your DOB inputs"
+        }
+        catch
+        {
+            print("Handle the errors well")
+        }
+        
+        return isError
+    }
+    
+    
+    
     /// This function creates a student profile and returns it.
     /// It creates an instance of Student and returns it.
     // This function is called when the Create button is clicked and the user has filled all the text fields.
@@ -79,9 +123,9 @@ class StudentCreateViewController: UIViewController {
                                            middleName: middleNameTF.text!,
                                            lastName: lastNameTF.text!)
         
-        let studentDob : Date = Date.init(YearString: dobYearTF.text!,
-                                          MonthString: dobMonthTF.text!,
-                                          DayString: dobDayTF.text!)
+        let studentDob : Date = try! Date.init(YearString: dobYearTF.text!,
+                                               MonthString: dobMonthTF.text!,
+                                               DayString: dobDayTF.text!)
         
         let studentAddress : Address = Address.init(houseNo: houseNoTF.text!,
                                                     area: areaTF.text!,
@@ -125,6 +169,9 @@ class StudentCreateViewController: UIViewController {
         if(isAnyFieldEmpty())
         {
             messageLabel.text = "All fields are compulsory"
+        }
+        else if(showErrorIfAny())
+        {
         }
         else
         {
