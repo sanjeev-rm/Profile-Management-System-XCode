@@ -7,8 +7,8 @@
 
 import Foundation
 
-/// This is the structure of Name of a person.
-struct Name
+/// This is a class representing the name of a person.
+class Name
 {
     private var firstName : String
     private var middleName : String
@@ -21,8 +21,7 @@ struct Name
         self.lastName = lastName
     }
     
-    // Have to use the keyword mutating inside structures.
-    mutating func setFirstName(firstName : String)
+    func setFirstName(firstName : String)
     {
         self.firstName = firstName
     }
@@ -32,7 +31,7 @@ struct Name
         return self.firstName
     }
     
-    mutating func setMiddleName(middleName : String)
+    func setMiddleName(middleName : String)
     {
         self.middleName = middleName
     }
@@ -42,7 +41,7 @@ struct Name
         return self.middleName
     }
     
-    mutating func setLastName(lastName : String)
+    func setLastName(lastName : String)
     {
         self.lastName = lastName
     }
@@ -52,7 +51,7 @@ struct Name
         return self.lastName
     }
     
-    /// Function to return an instance of Name in string format.
+    /// Returns the class Name in a String format.
     /// It's like the toString() in java.
     func toString() -> String
     {
@@ -60,13 +59,15 @@ struct Name
     }
 }
 
-/// This is the structure of a date.
-struct Date
+/// This class represents an Date.
+/// With properties such as year, month, and day.
+class Date
 {
     private var year : Int
     private var month : Int
     private var day : Int
     
+    /// This initializer takes in Int values as arguments for year, month and day.
     init(year : Int, month : Int, day : Int)
     {
         self.year = year
@@ -74,14 +75,55 @@ struct Date
         self.day = day
     }
     
+    // Convenience initializers are secondary, supporting initializers for a class. You can define a convenience initializer to call a designated initializer from the same class as the convenience initializer with some of the designated initializer's parameters set to default values.
+    // This is like constructor chaining in Java.
+    /// This is an another initializer that takes in String arguments and initilizes Int values to the properties of Date.
+    /// Default value is 0.
+    convenience init(YearString year : String, MonthString month : String, DayString day : String)
+    {
+        // If the String entered can't be converted to an Int then it returns nil. So we have to give an default value. Here it's 0.
+        self.init(year: Int(year) ?? 0, month: Int(month) ?? 0, day: Int(day) ?? 0)
+    }
+    
+    func setYear(year : Int)
+    {
+        self.year = year
+    }
+    
+    func getYear() -> Int
+    {
+        return self.year
+    }
+    
+    func setMonth(month : Int)
+    {
+        self.month = month
+    }
+    
+    func getMonth() -> Int
+    {
+        return self.month
+    }
+    
+    func setDay(day : Int)
+    {
+        self.day = day
+    }
+    
+    func getDay() -> Int
+    {
+        return self.day
+    }
+    
+    /// Returns the instance of class in String format.
     func toString() -> String
     {
         return "\(self.day)/\(self.month)/\(self.year)"
     }
 }
 
-/// This is the structure of an Address of a place.
-struct Address
+/// This class represents the address of a place.
+class Address
 {
     private var houseNo : String
     private var area : String
@@ -100,6 +142,67 @@ struct Address
         self.pincode = pincode
     }
     
+    func setHouseNo(houseNo : String)
+    {
+        self.houseNo = houseNo
+    }
+    
+    func getHouseNo() -> String
+    {
+        return self.houseNo
+    }
+    
+    func setArea(area : String)
+    {
+        self.area = area
+    }
+    
+    func getArea() -> String
+    {
+        return self.area
+    }
+    
+    func setCity(city : String)
+    {
+        self.city = city
+    }
+    
+    func getCity() -> String
+    {
+        return self.city
+    }
+    
+    func setState(state : String)
+    {
+        self.state = state
+    }
+    
+    func getState() -> String
+    {
+        return self.state
+    }
+    
+    func setCountry(country : String)
+    {
+        self.country = country
+    }
+    
+    func getCountry() -> String
+    {
+        return self.country
+    }
+    
+    func setPincode(pincode : String)
+    {
+        self.pincode = pincode
+    }
+    
+    func getPincode() -> String
+    {
+        return self.pincode
+    }
+    
+    /// Returns the instance of class Address in a String format.
     func toString() -> String
     {
         return "\(self.houseNo), \(self.area), \(self.city), \(self.state), \(self.country), \(self.pincode)"

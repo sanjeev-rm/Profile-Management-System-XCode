@@ -20,15 +20,18 @@ class Student : Person
     
     // Here in swift super class's initializer(constructor) should come after the child class's initializer(constructor).
     // Unlike in java where the super class's constructor comes first then the child class's properties are initialized.
-    init(Name name : Name, Gender gender : String, DateOfBirth dob : Date, Email email : String, MobileNumber  mobile : String, Address address : Address, RegistrationNumber registrationNumber : String, Program program : String, Branch branch : String, School school : String, IsHosteller isHosteller : String, graduatingYear graduatingYear : Int)
+    init(Name name : Name, Gender gender : String, DateOfBirth dob : Date, Email email : String, MobileNumber  mobile : String, Address address : Address, RegistrationNumber registrationNumber : String, Program program : String, Branch branch : String, School school : String, IsHosteller isHosteller : String, GraduatingYear graduatingYear : String)
     {
         self.registrationNumber = registrationNumber
         self.program = program
         self.branch = branch
         self.school = school
         self.isHosteller = isHosteller
-        self.graduatingYear = graduatingYear
+        self.graduatingYear = Int(graduatingYear) ?? 0
         super.init(Name: name, Gender: gender, DateOfBirth: dob, Email: email, MobileNumber: mobile, Address: address)
+        
+        // This initializes isHosteller variable to either "YES" or "NO" according to the argument.
+        self.setIsHosteller(isHosteller: isHosteller)
     }
     
     func setRegistrationNumber(registrationNumber : String)
@@ -71,9 +74,17 @@ class Student : Person
         return self.school
     }
     
+    // This setter sets the property isHosteller to either "YES" or "NO" according to the argument.
     func setIsHosteller(isHosteller : String)
     {
-        self.isHosteller = isHosteller
+        if(isHosteller == "Y" || isHosteller == "y" || isHosteller == "yes" || isHosteller == "YES" || isHosteller == "Yes")
+        {
+            self.isHosteller = "YES"
+        }
+        else
+        {
+            self.isHosteller = "NO"
+        }
     }
     
     func getIsHosteller() -> String

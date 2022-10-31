@@ -2427,10 +2427,10 @@
             </objects>
             <point key="canvasLocation" x="4693" y="2894"/>
         </scene>
-        <!--Student Profile Created VC-->
+        <!--Student Display Profile VC-->
         <scene sceneID="tlR-e0-goB">
             <objects>
-                <viewController title="Student Profile Created VC" id="lA5-rg-ZOn" customClass="StudentCreatedViewController" customModule="Profile_Management_System" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Student Display Profile VC" id="lA5-rg-ZOn" customClass="StudentDisplayViewController" customModule="Profile_Management_System" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K43-so-i60">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2840,7 +2840,7 @@
                             <constraint firstItem="p6a-cT-DwV" firstAttribute="trailing" secondItem="vcR-vf-Fuy" secondAttribute="trailing" constant="20" id="hvW-AN-a7y"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Paris's Profile" prompt="Profile Created" id="hpk-WB-SnF"/>
+                    <navigationItem key="navigationItem" title="Title" prompt="Prompt" id="hpk-WB-SnF"/>
                     <connections>
                         <outlet property="addressLabel" destination="Olt-sx-6sG" id="4g8-FB-Dvq"/>
                         <outlet property="branchLabel" destination="FEZ-fc-7mD" id="m5f-Ze-b7f"/>
@@ -2858,18 +2858,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dfh-MO-vvI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5580" y="-1769"/>
+            <point key="canvasLocation" x="7268" y="-1468"/>
         </scene>
         <!--Student Profile Create VC-->
         <scene sceneID="sKY-GI-4l0">
             <objects>
-                <viewController title="Student Profile Create VC" id="qjW-6J-JAV" customClass="StudentCreateViewController" customModule="Profile_Management_System" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Student Profile Create VC" id="qjW-6J-JAV" customClass="StudentEditUpdateViewController" customModule="Profile_Management_System" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NeR-0O-Vs9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o5X-55-fYi">
-                                <rect key="frame" x="20" y="140" width="374" height="722"/>
+                                <rect key="frame" x="20" y="174" width="374" height="688"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4X9-LM-y2k">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="1874.5"/>
@@ -3384,6 +3384,9 @@
                                                                         </fragment>
                                                                     </attributedString>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="tapUpdate:" destination="qjW-6J-JAV" eventType="touchUpInside" id="5Xb-I3-94o"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -3440,7 +3443,32 @@
                             <constraint firstItem="o5X-55-fYi" firstAttribute="bottom" secondItem="bqV-Bs-DfZ" secondAttribute="bottom" id="njD-yZ-NdD"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Update Profile" id="o6w-PJ-zcD"/>
+                    <navigationItem key="navigationItem" title="Update Profile" prompt="Edit Profile" id="o6w-PJ-zcD"/>
+                    <connections>
+                        <outlet property="addressAreaTF" destination="LJC-gk-TGF" id="GYR-jQ-nF7"/>
+                        <outlet property="addressCityTF" destination="JL9-n0-mNd" id="MmM-K0-nOW"/>
+                        <outlet property="addressCountryTF" destination="PHF-vQ-0LX" id="8z1-yY-urz"/>
+                        <outlet property="addressHouseNoTF" destination="87h-Hg-oFc" id="Sbq-Kl-ngc"/>
+                        <outlet property="addressPincodeTF" destination="JCZ-fe-VKi" id="dae-eK-PsY"/>
+                        <outlet property="addressStateTF" destination="mFm-6G-9g0" id="Ii5-My-T6i"/>
+                        <outlet property="branchTF" destination="dgR-qT-DLP" id="5cj-TC-NAU"/>
+                        <outlet property="dobDayTF" destination="nXb-1h-cKJ" id="OZK-nn-cWV"/>
+                        <outlet property="dobMonthTF" destination="TAf-57-W69" id="KKD-5q-Fwr"/>
+                        <outlet property="dobYearTF" destination="5Vl-cL-8d0" id="rYc-HE-xNK"/>
+                        <outlet property="emailTF" destination="aHc-2O-8n6" id="jto-Yc-DtL"/>
+                        <outlet property="firstNameTF" destination="Yyn-oq-qRM" id="oLf-06-pKd"/>
+                        <outlet property="genderTF" destination="QMg-BD-2bj" id="kl3-4d-ReD"/>
+                        <outlet property="graduatingYearTF" destination="SA5-I4-OXs" id="Z9Z-PK-BuE"/>
+                        <outlet property="hostellerTF" destination="F5A-H3-Lm7" id="75H-YG-98K"/>
+                        <outlet property="lastNameTF" destination="f8q-he-aed" id="c2E-Am-vnU"/>
+                        <outlet property="messageTF" destination="F5T-8O-OET" id="OD4-Ca-Sem"/>
+                        <outlet property="middleNameTF" destination="XeD-E2-P14" id="E9r-ef-r4M"/>
+                        <outlet property="mobileTF" destination="NH2-sW-tf2" id="Mgq-Fn-1fC"/>
+                        <outlet property="programTF" destination="wjj-Qu-Xt4" id="ETr-aQ-hGj"/>
+                        <outlet property="registrationNumberTF" destination="V5l-dz-gSt" id="Z9T-A0-3gc"/>
+                        <outlet property="schoolTF" destination="Nen-qj-FMx" id="D0G-7r-Q9q"/>
+                        <segue destination="lA5-rg-ZOn" kind="show" identifier="studentEditedSegue" id="OLg-f6-OIJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vEt-ni-cMX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4033,6 +4061,9 @@
             <point key="canvasLocation" x="7817" y="-465"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="OLg-f6-OIJ"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -79,9 +79,9 @@ class StudentCreateViewController: UIViewController {
                                            middleName: middleNameTF.text!,
                                            lastName: lastNameTF.text!)
         
-        let studentDob : Date = Date.init(year: Int(dobYearTF.text!) ?? 0,
-                                          month: Int(dobMonthTF.text!) ?? 0,
-                                          day: Int(dobDayTF.text!) ?? 0)
+        let studentDob : Date = Date.init(YearString: dobYearTF.text!,
+                                          MonthString: dobMonthTF.text!,
+                                          DayString: dobDayTF.text!)
         
         let studentAddress : Address = Address.init(houseNo: houseNoTF.text!,
                                                     area: areaTF.text!,
@@ -111,8 +111,8 @@ class StudentCreateViewController: UIViewController {
                             Program: programTF.text!,
                             Branch: branchTF.text!,
                             School: schoolTF.text!,
-                            IsHosteller: studentIsHosteller,
-                            graduatingYear: Int(graduatingYearTF.text!) ?? 0)
+                            IsHosteller: isHostellerTF.text!,
+                            GraduatingYear: graduatingYearTF.text!)
     }
     
     
@@ -128,10 +128,33 @@ class StudentCreateViewController: UIViewController {
         }
         else
         {
+            // Inserts the created profile to the students array.
             students.append(createStudentProfile())
+            
+            // Setting the currentStudentToDisplay to the lates profile we created.
+            // As we want to display that profile in the next view.
+            // students.last because the latest profile created is appended to the end of the array.
+            currentStudentToDisplay = students.last
+            
+            // Moving to the next Display view.
             performSegue(withIdentifier: "studentCreatedSegue", sender: self)
         }
     }
+    
+    
+    
+    /// This function prepare is used to transfer information from one VC to another.
+    /// Here this function is used to set the Student Display View Controller's navigation bar title and prompt.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        // Sets the navigation bars title.
+        segue.destination.navigationItem.title = firstNameTF.text! + "'s Profile"
+        
+        // Sets the navigation bars prompt.
+        segue.destination.navigationItem.prompt = "Profile Created"
+    }
+    
+    
     
     /*
     // MARK: - Navigation

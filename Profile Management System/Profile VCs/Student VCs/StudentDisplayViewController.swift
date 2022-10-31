@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StudentCreatedViewController: UIViewController {
+class StudentDisplayViewController: UIViewController {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var genderLabel: UILabel!
@@ -22,28 +22,26 @@ class StudentCreatedViewController: UIViewController {
     @IBOutlet weak var hostellerLabel: UILabel!
     @IBOutlet weak var graduatingYearLabel: UILabel!
     
-    /*Using ! which means that the interpreter will abort execution if the optional value is nil.
+    /* Using ! which means that the interpreter will abort execution if the optional value is nil.
      * Here we are using this because we know that it will never be nil. As a profile won't even be created even if any one field is empty. and the students array will contain only Students profile with all the information filled.
      * Therefore we can use ! instead of ?? as no need to give an default value as we know it won't be nil.
      */
-    /// latestStudent is the latest student profile that has been created.
-    let latestStudent : Student = students.last!
     
     /// This function updates all the labels with info of the profile just created.
     func updateLabels()
     {
-        nameLabel.text = latestStudent.getName().toString()
-        genderLabel.text = latestStudent.getGender()
-        dobLabel.text = latestStudent.getDob().toString()
-        emailLabel.text = latestStudent.getEmail()
-        mobileLabel.text = latestStudent.getMobile()
-        addressLabel.text = latestStudent.getAddress().toString()
-        registrationNumberLabel.text = latestStudent.getRegistrationNumber()
-        programLabel.text = latestStudent.getProgram()
-        branchLabel.text = latestStudent.getBranch()
-        schoolLabel.text = latestStudent.getSchool()
-        hostellerLabel.text = latestStudent.getIsHosteller()
-        graduatingYearLabel.text = String(latestStudent.getGraduatingYear())
+        nameLabel.text = currentStudentToDisplay!.getName().toString()
+        genderLabel.text = currentStudentToDisplay!.getGender()
+        dobLabel.text = currentStudentToDisplay!.getDob().toString()
+        emailLabel.text = currentStudentToDisplay!.getEmail()
+        mobileLabel.text = currentStudentToDisplay!.getMobile()
+        addressLabel.text = currentStudentToDisplay!.getAddress().toString()
+        registrationNumberLabel.text = currentStudentToDisplay!.getRegistrationNumber()
+        programLabel.text = currentStudentToDisplay!.getProgram()
+        branchLabel.text = currentStudentToDisplay!.getBranch()
+        schoolLabel.text = currentStudentToDisplay!.getSchool()
+        hostellerLabel.text = currentStudentToDisplay!.getIsHosteller()
+        graduatingYearLabel.text = String(currentStudentToDisplay!.getGraduatingYear())
     }
     
     override func viewDidLoad() {
@@ -55,9 +53,6 @@ class StudentCreatedViewController: UIViewController {
         
         // Updates the labels with info of th latest profile created.
         updateLabels()
-        
-        // Changing the title of the navigation bar.
-        navigationItem.title = latestStudent.getName().getFirstName() + "'s Profile"
     }
     
     /*
