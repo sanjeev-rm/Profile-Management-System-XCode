@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7335B3629116259008739E6 /* DateValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7335B3529116259008739E6 /* DateValidator.swift */; };
 		C74C844C2900795800FB7754 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74C844B2900795800FB7754 /* AppDelegate.swift */; };
 		C74C844E2900795800FB7754 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74C844D2900795800FB7754 /* SceneDelegate.swift */; };
 		C74C84502900795800FB7754 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74C844F2900795800FB7754 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C7335B3529116259008739E6 /* DateValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValidator.swift; sourceTree = "<group>"; };
 		C74C84482900795800FB7754 /* Profile Management System.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Profile Management System.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C74C844B2900795800FB7754 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C74C844D2900795800FB7754 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C7335B3329116174008739E6 /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				C7335B3429116221008739E6 /* PersonValidator */,
+			);
+			path = Validators;
+			sourceTree = "<group>";
+		};
+		C7335B3429116221008739E6 /* PersonValidator */ = {
+			isa = PBXGroup;
+			children = (
+				C7335B3529116259008739E6 /* DateValidator.swift */,
+			);
+			path = PersonValidator;
+			sourceTree = "<group>";
+		};
 		C74C843F2900795800FB7754 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +123,7 @@
 				C78C1007290A1A680095BE85 /* Profile VCs */,
 				C78C1012290BB0820095BE85 /* Profiles */,
 				C78C102F290FEBF50095BE85 /* Errors */,
+				C7335B3329116174008739E6 /* Validators */,
 			);
 			path = "Profile Management System";
 			sourceTree = "<group>";
@@ -326,6 +345,7 @@
 				C78C100D290BAFC00095BE85 /* StudentCreateViewController.swift in Sources */,
 				C78C1001290A00E70095BE85 /* StudentViewController.swift in Sources */,
 				C78C102E290E7EC40095BE85 /* StudentEditUpdateViewController.swift in Sources */,
+				C7335B3629116259008739E6 /* DateValidator.swift in Sources */,
 				C78C0FFF290A001F0095BE85 /* FacultyViewController.swift in Sources */,
 				C74C84502900795800FB7754 /* ViewController.swift in Sources */,
 				C74C844C2900795800FB7754 /* AppDelegate.swift in Sources */,

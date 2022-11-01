@@ -8,7 +8,7 @@
 import Foundation
 
 /// This class represents the address of a place.
-class Address
+class Address : CustomStringConvertible
 {
     private var houseNo : String
     private var area : String
@@ -16,6 +16,12 @@ class Address
     private var state : String
     private var country : String
     private var pincode : String
+    
+    /// Returns the instance of class Address in a String format.
+    var description: String
+    {
+        return "\(self.houseNo), \(self.area), \(self.city), \(self.state), \(self.country), \(self.pincode)"
+    }
     
     init(houseNo : String, area : String, city : String, state : String, country : String, pincode : String)
     {
@@ -85,11 +91,5 @@ class Address
     func getPincode() -> String
     {
         return self.pincode
-    }
-    
-    /// Returns the instance of class Address in a String format.
-    func toString() -> String
-    {
-        return "\(self.houseNo), \(self.area), \(self.city), \(self.state), \(self.country), \(self.pincode)"
     }
 }

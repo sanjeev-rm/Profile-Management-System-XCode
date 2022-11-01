@@ -78,9 +78,9 @@ class StudentEditUpdateViewController: UIViewController {
                                             MonthString: dobMonthTF.text!,
                                             DayString: dobDayTF.text!))
         
-        studentToEdit.setEmail(email: emailTF.text!)
+        try! studentToEdit.setEmail(email: emailTF.text!)
         
-        studentToEdit.setMobile(mobile: mobileTF.text!)
+        try! studentToEdit.setMobile(mobile: mobileTF.text!)
         
         studentToEdit.setAddress(address: Address.init(houseNo: addressHouseNoTF.text!,
                                                        area: addressAreaTF.text!,

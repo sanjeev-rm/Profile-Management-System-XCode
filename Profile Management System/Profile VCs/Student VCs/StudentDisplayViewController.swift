@@ -30,12 +30,12 @@ class StudentDisplayViewController: UIViewController {
     /// This function updates all the labels with info of the profile just created.
     func updateLabels()
     {
-        nameLabel.text = currentStudentToDisplay!.getName().toString()
+        nameLabel.text = currentStudentToDisplay!.getName().description
         genderLabel.text = currentStudentToDisplay!.getGender()
-        dobLabel.text = currentStudentToDisplay!.getDob().toString()
+        dobLabel.text = currentStudentToDisplay!.getDob().description
         emailLabel.text = currentStudentToDisplay!.getEmail()
         mobileLabel.text = currentStudentToDisplay!.getMobile()
-        addressLabel.text = currentStudentToDisplay!.getAddress().toString()
+        addressLabel.text = currentStudentToDisplay!.getAddress().description
         registrationNumberLabel.text = currentStudentToDisplay!.getRegistrationNumber()
         programLabel.text = currentStudentToDisplay!.getProgram()
         branchLabel.text = currentStudentToDisplay!.getBranch()

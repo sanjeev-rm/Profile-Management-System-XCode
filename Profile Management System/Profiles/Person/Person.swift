@@ -17,7 +17,7 @@ class Person
     private var mobile : String
     private var address : Address
     
-    init(Name name : Name, Gender gender : String, DateOfBirth dob : Date, Email email : String, MobileNumber mobile : String, Address address : Address)
+    init(Name name : Name, Gender gender : String, DateOfBirth dob : Date, Email email : String, MobileNumber mobile : String, Address address : Address) throws
     {
         self.name = name
         self.gender = gender
@@ -25,6 +25,10 @@ class Person
         self.email = email
         self.mobile = mobile
         self.address = address
+        
+        //
+        try setEmail(email: email)
+        try setMobile(mobile: mobile)
     }
     
     func setName(name : Name)
@@ -57,8 +61,12 @@ class Person
         return self.dob
     }
     
-    func setEmail(email : String)
+    func setEmail(email : String) throws
     {
+        if(!email.contains("@"))
+        {
+            throw EmailError.invalidEmailError
+        }
         self.email = email
     }
     
@@ -67,8 +75,16 @@ class Person
         return self.email
     }
     
-    func setMobile(mobile : String)
+    func setMobile(mobile : String) throws
     {
+        if(mobile.count < 7 || mobile.count > 15)
+        {
+            throw MobileError.lengthInvalidError
+        }
+        else if(!isNumPresent(string: mobile))
+        {
+            throw MobileError.typeMismatchError
+        }
         self.mobile = mobile
     }
     
@@ -85,5 +101,22 @@ class Person
     func getAddress() -> Address
     {
         return self.address
+    }
+    
+    
+    
+    /// Function that checks if number is present in a string.
+    /// If yes returns true.
+    /// Else returns false.
+    private func isNumPresent(string : String) -> Bool
+    {
+        for char in string
+        {
+            if(char.isNumber)
+            {
+                return true
+            }
+        }
+        return false
     }
 }

@@ -8,11 +8,18 @@
 import Foundation
 
 /// This is a class representing the name of a person.
-class Name
+class Name : CustomStringConvertible
 {
     private var firstName : String
     private var middleName : String
     private var lastName : String
+    
+    // This property description was implemented from protocol CustomStringConvertible.
+    /// Returns the class Name instance in  String format.
+    var description: String
+    {
+        return "\(self.firstName) \(self.middleName) \(self.lastName)"
+    }
     
     init(firstName : String, middleName : String, lastName : String)
     {
@@ -49,12 +56,5 @@ class Name
     func getLastName() -> String
     {
         return self.lastName
-    }
-    
-    /// Returns the class Name in a String format.
-    /// It's like the toString() in java.
-    func toString() -> String
-    {
-        return "\(self.firstName) \(self.middleName) \(self.lastName)"
     }
 }

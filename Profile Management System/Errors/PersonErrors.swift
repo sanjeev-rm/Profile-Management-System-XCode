@@ -12,4 +12,16 @@ enum DateError : Error
     case invalidYearError
     case invalidMonthError
     case invalidDayError
+    case typeMismatchError
+}
+
+enum EmailError : Error
+{
+    case invalidEmailError
+}
+
+enum MobileError : Error
+{
+    case lengthInvalidError
+    case typeMismatchError
 }

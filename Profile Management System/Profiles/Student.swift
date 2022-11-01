@@ -20,7 +20,7 @@ class Student : Person
     
     // Here in swift super class's initializer(constructor) should come after the child class's initializer(constructor).
     // Unlike in java where the super class's constructor comes first then the child class's properties are initialized.
-    init(Name name : Name, Gender gender : String, DateOfBirth dob : Date, Email email : String, MobileNumber  mobile : String, Address address : Address, RegistrationNumber registrationNumber : String, Program program : String, Branch branch : String, School school : String, IsHosteller isHosteller : String, GraduatingYear graduatingYear : String)
+    init(Name name : Name, Gender gender : String, DateOfBirth dob : Date, Email email : String, MobileNumber  mobile : String, Address address : Address, RegistrationNumber registrationNumber : String, Program program : String, Branch branch : String, School school : String, IsHosteller isHosteller : String, GraduatingYear graduatingYear : String) throws
     {
         self.registrationNumber = registrationNumber
         self.program = program
@@ -28,7 +28,7 @@ class Student : Person
         self.school = school
         self.isHosteller = isHosteller
         self.graduatingYear = Int(graduatingYear) ?? 0
-        super.init(Name: name, Gender: gender, DateOfBirth: dob, Email: email, MobileNumber: mobile, Address: address)
+        try super.init(Name: name, Gender: gender, DateOfBirth: dob, Email: email, MobileNumber: mobile, Address: address)
         
         // This initializes isHosteller variable to either "YES" or "NO" according to the argument.
         self.setIsHosteller(isHosteller: isHosteller)

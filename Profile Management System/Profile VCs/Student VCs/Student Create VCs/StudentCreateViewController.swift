@@ -61,54 +61,10 @@ class StudentCreateViewController: UIViewController {
     
     
     
-    /// This function checks if there are any errors in the fields entries.
-    /// If there are errors it shows error message in the view. And returns true.
-    /// If no errors returns false.
-    func showErrorIfAny() -> Bool
-    {
-        var isError = true
-        
-        do
-        {
-            try Date.init(YearString: dobYearTF.text!, MonthString: dobMonthTF.text!, DayString: dobDayTF.text!)
-            isError = false
-        }
-        catch CommonError.typeMismatchError
-        {
-            messageLabel.text = "Please enter only integers for DOB"
-        }
-        catch DateError.invalidYearError
-        {
-            dobYearTF.text = ""
-            dobYearTF.placeholder = "Invalid Year [Minimum : 100]"
-            messageLabel.text = "Please check your DOB inputs"
-        }
-        catch DateError.invalidMonthError
-        {
-            dobMonthTF.text = ""
-            dobMonthTF.placeholder = "Invalid Month [valid : 1 - 12]"
-            messageLabel.text = "Please check your DOB inputs"
-        }
-        catch DateError.invalidDayError
-        {
-            dobDayTF.text = ""
-            dobDayTF.placeholder = "Invalid Day [valid : 1 - 31 / 29]"
-            messageLabel.text = "Please check your DOB inputs"
-        }
-        catch
-        {
-            print("Handle the errors well")
-        }
-        
-        return isError
-    }
-    
-    
-    
     /// This function creates a student profile and returns it.
     /// It creates an instance of Student and returns it.
     // This function is called when the Create button is clicked and the user has filled all the text fields.
-    func createStudentProfile() -> Student
+    func createStudentProfile() throws -> Student
     {
         /* ! --> is used to abort execution if the string value is nil.
          * ?? --> is used to send an default value if the value we are trying to send (text) is nil.
@@ -123,7 +79,7 @@ class StudentCreateViewController: UIViewController {
                                            middleName: middleNameTF.text!,
                                            lastName: lastNameTF.text!)
         
-        let studentDob : Date = try! Date.init(YearString: dobYearTF.text!,
+        let studentDob : Date = try Date.init(YearString: dobYearTF.text!,
                                                MonthString: dobMonthTF.text!,
                                                DayString: dobDayTF.text!)
         
@@ -145,18 +101,18 @@ class StudentCreateViewController: UIViewController {
         }
         
         // returning an instance of Student.
-        return Student.init(Name: studentName,
-                            Gender: genderTF.text!,
-                            DateOfBirth: studentDob,
-                            Email: emailTF.text!,
-                            MobileNumber: mobileTF.text!,
-                            Address: studentAddress,
-                            RegistrationNumber: registrationNoTF.text!,
-                            Program: programTF.text!,
-                            Branch: branchTF.text!,
-                            School: schoolTF.text!,
-                            IsHosteller: isHostellerTF.text!,
-                            GraduatingYear: graduatingYearTF.text!)
+        return try Student.init(Name: studentName,
+                                Gender: genderTF.text!,
+                                DateOfBirth: studentDob,
+                                Email: emailTF.text!,
+                                MobileNumber: mobileTF.text!,
+                                Address: studentAddress,
+                                RegistrationNumber: registrationNoTF.text!,
+                                Program: programTF.text!,
+                                Branch: branchTF.text!,
+                                School: schoolTF.text!,
+                                IsHosteller: isHostellerTF.text!,
+                                GraduatingYear: graduatingYearTF.text!)
     }
     
     
@@ -170,21 +126,65 @@ class StudentCreateViewController: UIViewController {
         {
             messageLabel.text = "All fields are compulsory"
         }
-        else if(showErrorIfAny())
-        {
-        }
         else
         {
-            // Inserts the created profile to the students array.
-            students.append(createStudentProfile())
-            
-            // Setting the currentStudentToDisplay to the lates profile we created.
-            // As we want to display that profile in the next view.
-            // students.last because the latest profile created is appended to the end of the array.
-            currentStudentToDisplay = students.last
-            
-            // Moving to the next Display view.
-            performSegue(withIdentifier: "studentCreatedSegue", sender: self)
+            do
+            {
+                // Inserts the created profile to the students array.
+                try students.append(createStudentProfile())
+                
+                // Setting the currentStudentToDisplay to the lates profile we created.
+                // As we want to display that profile in the next view.
+                // students.last because the latest profile created is appended to the end of the array.
+                currentStudentToDisplay = students.last
+                
+                // Moving to the next Display view.
+                performSegue(withIdentifier: "studentCreatedSegue", sender: self)
+            }
+            catch DateError.invalidYearError
+            {
+                dobYearTF.text = ""
+                dobYearTF.placeholder = "Invalid Year [Valid Minimum : 100]"
+                messageLabel.text = "Please check your DOB inputs"
+            }
+            catch DateError.invalidMonthError
+            {
+                dobMonthTF.text = ""
+                dobMonthTF.placeholder = "Invalid Month [valid : 1 - 12]"
+                messageLabel.text = "Please check your DOB inputs"
+            }
+            catch DateError.invalidDayError
+            {
+                dobDayTF.text = ""
+                dobDayTF.placeholder = "Invalid Day [valid : 1 - 31 / 29]"
+                messageLabel.text = "Please check your DOB"
+            }
+            catch DateError.typeMismatchError
+            {
+                messageLabel.text = "Please enter only enter integers for DOB"
+            }
+            catch EmailError.invalidEmailError
+            {
+                messageLabel.text = "Please check your email"
+                emailTF.text = ""
+                emailTF.placeholder = "Invalid Email"
+            }
+            catch MobileError.lengthInvalidError
+            {
+                messageLabel.text = "Please check your mobile digits"
+                mobileTF.text = ""
+                mobileTF.placeholder = "Invalid Mobile [valid no of digits : min-7, max-15]"
+            }
+            catch MobileError.typeMismatchError
+            {
+                messageLabel.text = "Please check your mobile.digits"
+                mobileTF.text = ""
+                mobileTF.placeholder = "Invalid Mobile [valid : should contain digits]"
+            }
+            catch
+            {
+                print("Handle the errors well")
+            }
         }
     }
     

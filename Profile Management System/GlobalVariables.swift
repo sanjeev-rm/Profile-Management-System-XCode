@@ -20,3 +20,11 @@ var indexOfStudentProfileToEdit : Int = 0
 /// This variable stores the current student profile that has to be displayed.
 /// This is the student profile that the StudentDisplayVC displays.
 var currentStudentToDisplay : Student?
+
+class Test
+{
+    func sayHello()
+    {
+        print("Hello")
+    }
+}
