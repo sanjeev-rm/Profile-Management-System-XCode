@@ -9,13 +9,13 @@ import UIKit
 
 class StudentViewController: UIViewController {
     
-    // Functions fired when the button create is clicked.
+    /// Functions fired when the button create is clicked.
     @IBAction func tapCreate(_ sender: UIButton)
     {
         performSegue(withIdentifier: "studentCreateSegue", sender: self)
     }
     
-    // Function fired when the button edit is clicked.
+    /// Function fired when the button edit is clicked.
     @IBAction func tapEdit(_ sender: UIButton)
     {
         performSegue(withIdentifier: "studentEditSegue", sender: self)

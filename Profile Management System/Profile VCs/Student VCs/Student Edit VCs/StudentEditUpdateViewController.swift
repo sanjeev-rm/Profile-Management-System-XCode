@@ -113,7 +113,8 @@ class StudentEditUpdateViewController: UIViewController {
     
     
     
-    /// This function checks if any of the text Fields are empty.
+    /// This function checks if any of the text field is empty.
+    /// - returns: true if none of the text firlds are empty. false if any of the text field is empty.
     func isAnyFieldEmpty() -> Bool
     {
         if(firstNameTF.hasText && middleNameTF.hasText && lastNameTF.hasText && genderTF.hasText && dobYearTF.hasText && dobMonthTF.hasText && dobDayTF.hasText && emailTF.hasText && mobileTF.hasText && addressHouseNoTF.hasText && addressAreaTF.hasText && addressCityTF.hasText && addressStateTF.hasText && addressCountryTF.hasText && addressPincodeTF.hasText && registrationNumberTF.hasText && programTF.hasText && branchTF.hasText && schoolTF.hasText && hostellerTF.hasText && graduatingYearTF.hasText)

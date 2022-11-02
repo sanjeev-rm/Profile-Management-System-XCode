@@ -63,10 +63,7 @@ class Person
     
     func setEmail(email : String) throws
     {
-        if(!email.contains("@"))
-        {
-            throw EmailError.invalidEmailError
-        }
+        try EmailValidator.validateEmail(Email: email)
         self.email = email
     }
     
@@ -77,14 +74,7 @@ class Person
     
     func setMobile(mobile : String) throws
     {
-        if(mobile.count < 7 || mobile.count > 15)
-        {
-            throw MobileError.lengthInvalidError
-        }
-        else if(!isNumPresent(string: mobile))
-        {
-            throw MobileError.typeMismatchError
-        }
+        try MobileValidator.validateMobile(Mobile: mobile)
         self.mobile = mobile
     }
     
@@ -101,22 +91,5 @@ class Person
     func getAddress() -> Address
     {
         return self.address
-    }
-    
-    
-    
-    /// Function that checks if number is present in a string.
-    /// If yes returns true.
-    /// Else returns false.
-    private func isNumPresent(string : String) -> Bool
-    {
-        for char in string
-        {
-            if(char.isNumber)
-            {
-                return true
-            }
-        }
-        return false
     }
 }

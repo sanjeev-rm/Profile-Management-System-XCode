@@ -18,6 +18,8 @@ enum DateError : Error
 enum EmailError : Error
 {
     case invalidEmailError
+    case invalidRecipientNameError
+    case invalidDomainNameError
 }
 
 enum MobileError : Error

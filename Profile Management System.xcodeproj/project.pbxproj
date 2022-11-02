@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C7335B3629116259008739E6 /* DateValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7335B3529116259008739E6 /* DateValidator.swift */; };
+		C7335B382912B424008739E6 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7335B372912B424008739E6 /* EmailValidator.swift */; };
+		C7335B3A2912B4FC008739E6 /* MobileValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7335B392912B4FC008739E6 /* MobileValidator.swift */; };
 		C74C844C2900795800FB7754 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74C844B2900795800FB7754 /* AppDelegate.swift */; };
 		C74C844E2900795800FB7754 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74C844D2900795800FB7754 /* SceneDelegate.swift */; };
 		C74C84502900795800FB7754 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74C844F2900795800FB7754 /* ViewController.swift */; };
@@ -37,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		C7335B3529116259008739E6 /* DateValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValidator.swift; sourceTree = "<group>"; };
+		C7335B372912B424008739E6 /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
+		C7335B392912B4FC008739E6 /* MobileValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileValidator.swift; sourceTree = "<group>"; };
 		C74C84482900795800FB7754 /* Profile Management System.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Profile Management System.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C74C844B2900795800FB7754 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C74C844D2900795800FB7754 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				C7335B3529116259008739E6 /* DateValidator.swift */,
+				C7335B372912B424008739E6 /* EmailValidator.swift */,
+				C7335B392912B4FC008739E6 /* MobileValidator.swift */,
 			);
 			path = PersonValidator;
 			sourceTree = "<group>";
@@ -347,8 +353,10 @@
 				C78C102E290E7EC40095BE85 /* StudentEditUpdateViewController.swift in Sources */,
 				C7335B3629116259008739E6 /* DateValidator.swift in Sources */,
 				C78C0FFF290A001F0095BE85 /* FacultyViewController.swift in Sources */,
+				C7335B382912B424008739E6 /* EmailValidator.swift in Sources */,
 				C74C84502900795800FB7754 /* ViewController.swift in Sources */,
 				C74C844C2900795800FB7754 /* AppDelegate.swift in Sources */,
+				C7335B3A2912B4FC008739E6 /* MobileValidator.swift in Sources */,
 				C78C1014290BBBA00095BE85 /* StudentEditViewController.swift in Sources */,
 				C78C100B290BA8AA0095BE85 /* Student.swift in Sources */,
 				C78C1003290A03010095BE85 /* EmployeeViewController.swift in Sources */,

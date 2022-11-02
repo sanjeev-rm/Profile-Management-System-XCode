@@ -47,9 +47,8 @@ class StudentCreateViewController: UIViewController {
     
     
     
-    /// This function checks if any of the field is empty.
-    /// If any field is empty returns true.
-    /// If all the field are filled returns false.
+    /// This function checks if any of the text field is empty.
+    /// - returns: true if none of the text firlds are empty. false if any of the text field is empty.
     func isAnyFieldEmpty() -> Bool
     {
         if(firstNameTF.hasText && middleNameTF.hasText && lastNameTF.hasText && genderTF.hasText && dobYearTF.hasText && dobMonthTF.hasText && dobDayTF.hasText && emailTF.hasText && mobileTF.hasText && houseNoTF.hasText && areaTF.hasText && cityTF.hasText && stateTF.hasText && countryTF.hasText && pincodeTF.hasText && registrationNoTF.hasText && programTF.hasText && branchTF.hasText && schoolTF.hasText && isHostellerTF.hasText && graduatingYearTF.hasText)
@@ -61,9 +60,11 @@ class StudentCreateViewController: UIViewController {
     
     
     
-    /// This function creates a student profile and returns it.
-    /// It creates an instance of Student and returns it.
     // This function is called when the Create button is clicked and the user has filled all the text fields.
+    /// This function creates a student profile and returns it.
+    /// Creates an student instance with the text field inputs.
+    /// - throws: DateError, EmailError, MobileError.
+    /// - returns: an instance of Student.
     func createStudentProfile() throws -> Student
     {
         /* ! --> is used to abort execution if the string value is nil.
@@ -161,13 +162,25 @@ class StudentCreateViewController: UIViewController {
             }
             catch DateError.typeMismatchError
             {
-                messageLabel.text = "Please enter only enter integers for DOB"
+                messageLabel.text = "Please enter only integers for DOB"
             }
             catch EmailError.invalidEmailError
             {
                 messageLabel.text = "Please check your email"
                 emailTF.text = ""
                 emailTF.placeholder = "Invalid Email"
+            }
+            catch EmailError.invalidRecipientNameError
+            {
+                messageLabel.text = "Please check your email"
+                emailTF.text = ""
+                emailTF.placeholder = "Invalid Email [Invalid recipient name]"
+            }
+            catch EmailError.invalidDomainNameError
+            {
+                messageLabel.text = "Please check your email"
+                emailTF.text = ""
+                emailTF.placeholder = "Invalid Email [invalid domain name]"
             }
             catch MobileError.lengthInvalidError
             {
