@@ -25,8 +25,9 @@ class DateValidator
     /// THROWS --> DateError.invalidYearError
     static func validateYear(year : Int) throws
     {
-        // Throws error if the year entered is lesser than 100.
-        if(year < 100)
+        // Throws error if the year entered has no.of digits lesser than 4 or greater than 4.
+        let noOfDigits : Int = String.init(year).count
+        if(noOfDigits < 4 || noOfDigits > 4)
         {
             throw DateError.invalidYearError
         }

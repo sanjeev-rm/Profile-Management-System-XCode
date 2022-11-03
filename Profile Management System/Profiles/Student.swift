@@ -20,8 +20,16 @@ class Student : Person
     
     // Here in swift super class's initializer(constructor) should come after the child class's initializer(constructor).
     // Unlike in java where the super class's constructor comes first then the child class's properties are initialized.
+    /// Initializer.
+    /// - Throws: CommonError.typeMismatchError
     init(Name name : Name, Gender gender : String, DateOfBirth dob : Date, Email email : String, MobileNumber  mobile : String, Address address : Address, RegistrationNumber registrationNumber : String, Program program : String, Branch branch : String, School school : String, IsHosteller isHosteller : String, GraduatingYear graduatingYear : String) throws
     {
+        // This checks if the input that is string can be converted to an Int. If not it means it contains characters other than numbers.
+        if(Int(graduatingYear) == nil)
+        {
+            throw CommonError.typeMismatchError
+        }
+        
         self.registrationNumber = registrationNumber
         self.program = program
         self.branch = branch
@@ -32,6 +40,8 @@ class Student : Person
         
         // This initializes isHosteller variable to either "YES" or "NO" according to the argument.
         self.setIsHosteller(isHosteller: isHosteller)
+        
+        try setGraduatingYear(graduatingYear: Int(graduatingYear)!)
     }
     
     func setRegistrationNumber(registrationNumber : String)
@@ -92,8 +102,17 @@ class Student : Person
         return self.isHosteller
     }
     
-    func setGraduatingYear(graduatingYear : Int)
+    func setGraduatingYear(graduatingYear : Int) throws
     {
+        do
+        {
+            try DateValidator.validateYear(year: graduatingYear)
+        }
+        catch DateError.invalidYearError
+        {
+            throw GraduatingYearError.invalidYearError
+        }
+        
         self.graduatingYear = graduatingYear
     }
     

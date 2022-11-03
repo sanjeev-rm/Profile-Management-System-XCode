@@ -10,6 +10,9 @@
 		C7335B3629116259008739E6 /* DateValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7335B3529116259008739E6 /* DateValidator.swift */; };
 		C7335B382912B424008739E6 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7335B372912B424008739E6 /* EmailValidator.swift */; };
 		C7335B3A2912B4FC008739E6 /* MobileValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7335B392912B4FC008739E6 /* MobileValidator.swift */; };
+		C7335B3F29142BEF008739E6 /* StudentErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7335B3E29142BEF008739E6 /* StudentErrors.swift */; };
+		C7335B4229142D13008739E6 /* RegistrationNumberValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7335B4129142D13008739E6 /* RegistrationNumberValidator.swift */; };
+		C7335B4429142FEB008739E6 /* GraduatingValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7335B4329142FEB008739E6 /* GraduatingValidator.swift */; };
 		C74C844C2900795800FB7754 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74C844B2900795800FB7754 /* AppDelegate.swift */; };
 		C74C844E2900795800FB7754 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74C844D2900795800FB7754 /* SceneDelegate.swift */; };
 		C74C84502900795800FB7754 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74C844F2900795800FB7754 /* ViewController.swift */; };
@@ -31,7 +34,7 @@
 		C78C1028290E4A670095BE85 /* Alumni.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C1027290E4A670095BE85 /* Alumni.swift */; };
 		C78C102E290E7EC40095BE85 /* StudentEditUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C102D290E7EC40095BE85 /* StudentEditUpdateViewController.swift */; };
 		C78C1031290FEC210095BE85 /* PersonErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C1030290FEC210095BE85 /* PersonErrors.swift */; };
-		C78C10332910023C0095BE85 /* CommonError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C10322910023C0095BE85 /* CommonError.swift */; };
+		C78C10332910023C0095BE85 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C10322910023C0095BE85 /* Errors.swift */; };
 		C78C1036291004FF0095BE85 /* Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C1035291004FF0095BE85 /* Name.swift */; };
 		C78C1038291005300095BE85 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C1037291005300095BE85 /* Date.swift */; };
 		C78C103A2910057A0095BE85 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C10392910057A0095BE85 /* Address.swift */; };
@@ -41,6 +44,9 @@
 		C7335B3529116259008739E6 /* DateValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValidator.swift; sourceTree = "<group>"; };
 		C7335B372912B424008739E6 /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		C7335B392912B4FC008739E6 /* MobileValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileValidator.swift; sourceTree = "<group>"; };
+		C7335B3E29142BEF008739E6 /* StudentErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentErrors.swift; sourceTree = "<group>"; };
+		C7335B4129142D13008739E6 /* RegistrationNumberValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationNumberValidator.swift; sourceTree = "<group>"; };
+		C7335B4329142FEB008739E6 /* GraduatingValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraduatingValidator.swift; sourceTree = "<group>"; };
 		C74C84482900795800FB7754 /* Profile Management System.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Profile Management System.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C74C844B2900795800FB7754 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C74C844D2900795800FB7754 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,7 +70,7 @@
 		C78C1027290E4A670095BE85 /* Alumni.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alumni.swift; sourceTree = "<group>"; };
 		C78C102D290E7EC40095BE85 /* StudentEditUpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentEditUpdateViewController.swift; sourceTree = "<group>"; };
 		C78C1030290FEC210095BE85 /* PersonErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonErrors.swift; sourceTree = "<group>"; };
-		C78C10322910023C0095BE85 /* CommonError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonError.swift; sourceTree = "<group>"; };
+		C78C10322910023C0095BE85 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		C78C1035291004FF0095BE85 /* Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Name.swift; sourceTree = "<group>"; };
 		C78C1037291005300095BE85 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		C78C10392910057A0095BE85 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
@@ -84,6 +90,7 @@
 		C7335B3329116174008739E6 /* Validators */ = {
 			isa = PBXGroup;
 			children = (
+				C7335B4029142CA2008739E6 /* StudentValidator */,
 				C7335B3429116221008739E6 /* PersonValidator */,
 			);
 			path = Validators;
@@ -97,6 +104,15 @@
 				C7335B392912B4FC008739E6 /* MobileValidator.swift */,
 			);
 			path = PersonValidator;
+			sourceTree = "<group>";
+		};
+		C7335B4029142CA2008739E6 /* StudentValidator */ = {
+			isa = PBXGroup;
+			children = (
+				C7335B4129142D13008739E6 /* RegistrationNumberValidator.swift */,
+				C7335B4329142FEB008739E6 /* GraduatingValidator.swift */,
+			);
+			path = StudentValidator;
 			sourceTree = "<group>";
 		};
 		C74C843F2900795800FB7754 = {
@@ -261,7 +277,8 @@
 			isa = PBXGroup;
 			children = (
 				C78C1030290FEC210095BE85 /* PersonErrors.swift */,
-				C78C10322910023C0095BE85 /* CommonError.swift */,
+				C78C10322910023C0095BE85 /* Errors.swift */,
+				C7335B3E29142BEF008739E6 /* StudentErrors.swift */,
 			);
 			path = Errors;
 			sourceTree = "<group>";
@@ -348,6 +365,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7335B3F29142BEF008739E6 /* StudentErrors.swift in Sources */,
 				C78C100D290BAFC00095BE85 /* StudentCreateViewController.swift in Sources */,
 				C78C1001290A00E70095BE85 /* StudentViewController.swift in Sources */,
 				C78C102E290E7EC40095BE85 /* StudentEditUpdateViewController.swift in Sources */,
@@ -356,12 +374,14 @@
 				C7335B382912B424008739E6 /* EmailValidator.swift in Sources */,
 				C74C84502900795800FB7754 /* ViewController.swift in Sources */,
 				C74C844C2900795800FB7754 /* AppDelegate.swift in Sources */,
+				C7335B4229142D13008739E6 /* RegistrationNumberValidator.swift in Sources */,
 				C7335B3A2912B4FC008739E6 /* MobileValidator.swift in Sources */,
 				C78C1014290BBBA00095BE85 /* StudentEditViewController.swift in Sources */,
 				C78C100B290BA8AA0095BE85 /* Student.swift in Sources */,
 				C78C1003290A03010095BE85 /* EmployeeViewController.swift in Sources */,
 				C78C1018290CC37A0095BE85 /* GlobalVariables.swift in Sources */,
 				C74C844E2900795800FB7754 /* SceneDelegate.swift in Sources */,
+				C7335B4429142FEB008739E6 /* GraduatingValidator.swift in Sources */,
 				C78C1024290E4A420095BE85 /* Faculty.swift in Sources */,
 				C78C101A290E2D020095BE85 /* StudentDisplayViewController.swift in Sources */,
 				C78C1031290FEC210095BE85 /* PersonErrors.swift in Sources */,
@@ -369,7 +389,7 @@
 				C78C1009290B99BB0095BE85 /* Person.swift in Sources */,
 				C78C1038291005300095BE85 /* Date.swift in Sources */,
 				C78C1028290E4A670095BE85 /* Alumni.swift in Sources */,
-				C78C10332910023C0095BE85 /* CommonError.swift in Sources */,
+				C78C10332910023C0095BE85 /* Errors.swift in Sources */,
 				C78C1026290E4A540095BE85 /* Employee.swift in Sources */,
 				C78C103A2910057A0095BE85 /* Address.swift in Sources */,
 				C78C1005290A031B0095BE85 /* AlumniViewController.swift in Sources */,

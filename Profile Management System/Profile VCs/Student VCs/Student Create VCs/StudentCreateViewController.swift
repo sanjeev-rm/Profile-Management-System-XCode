@@ -195,6 +195,7 @@ class StudentCreateViewController: UIViewController {
                 mobileTF.placeholder = "Invalid Mobile [valid : should contain digits]"
             }
             catch
+            catch
             {
                 print("Handle the errors well")
             }
