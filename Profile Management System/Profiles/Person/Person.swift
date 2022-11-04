@@ -17,18 +17,20 @@ class Person
     private var mobile : String
     private var address : Address
     
+    /// Initalizer of class Person.
+    /// - throws: EmailError.invalidEmailError, EmailError.invalidRecipientNameError, EmailError.invalidDomainNameError, MobileError.typeMismatchError, MobileError.lengthInvalidError
     init(Name name : Name, Gender gender : String, DateOfBirth dob : Date, Email email : String, MobileNumber mobile : String, Address address : Address) throws
     {
+        // This is to validate emil and mobile. Throws respective errors if invalid.
+        try EmailValidator.validateEmail(Email: email)
+        try MobileValidator.validateMobile(Mobile: mobile)
+        
         self.name = name
         self.gender = gender
         self.dob = dob
         self.email = email
         self.mobile = mobile
         self.address = address
-        
-        //
-        try setEmail(email: email)
-        try setMobile(mobile: mobile)
     }
     
     func setName(name : Name)
