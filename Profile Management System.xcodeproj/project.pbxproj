@@ -12,7 +12,7 @@
 		C7335B3A2912B4FC008739E6 /* MobileValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7335B392912B4FC008739E6 /* MobileValidator.swift */; };
 		C7335B3F29142BEF008739E6 /* StudentErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7335B3E29142BEF008739E6 /* StudentErrors.swift */; };
 		C7335B4229142D13008739E6 /* RegistrationNumberValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7335B4129142D13008739E6 /* RegistrationNumberValidator.swift */; };
-		C7335B4429142FEB008739E6 /* GraduatingValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7335B4329142FEB008739E6 /* GraduatingValidator.swift */; };
+		C7335B4429142FEB008739E6 /* GraduatingYearValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7335B4329142FEB008739E6 /* GraduatingYearValidator.swift */; };
 		C74C844C2900795800FB7754 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74C844B2900795800FB7754 /* AppDelegate.swift */; };
 		C74C844E2900795800FB7754 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74C844D2900795800FB7754 /* SceneDelegate.swift */; };
 		C74C84502900795800FB7754 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74C844F2900795800FB7754 /* ViewController.swift */; };
@@ -46,7 +46,7 @@
 		C7335B392912B4FC008739E6 /* MobileValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileValidator.swift; sourceTree = "<group>"; };
 		C7335B3E29142BEF008739E6 /* StudentErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentErrors.swift; sourceTree = "<group>"; };
 		C7335B4129142D13008739E6 /* RegistrationNumberValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationNumberValidator.swift; sourceTree = "<group>"; };
-		C7335B4329142FEB008739E6 /* GraduatingValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraduatingValidator.swift; sourceTree = "<group>"; };
+		C7335B4329142FEB008739E6 /* GraduatingYearValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraduatingYearValidator.swift; sourceTree = "<group>"; };
 		C74C84482900795800FB7754 /* Profile Management System.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Profile Management System.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C74C844B2900795800FB7754 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C74C844D2900795800FB7754 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,7 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				C7335B4129142D13008739E6 /* RegistrationNumberValidator.swift */,
-				C7335B4329142FEB008739E6 /* GraduatingValidator.swift */,
+				C7335B4329142FEB008739E6 /* GraduatingYearValidator.swift */,
 			);
 			path = StudentValidator;
 			sourceTree = "<group>";
@@ -381,7 +381,7 @@
 				C78C1003290A03010095BE85 /* EmployeeViewController.swift in Sources */,
 				C78C1018290CC37A0095BE85 /* GlobalVariables.swift in Sources */,
 				C74C844E2900795800FB7754 /* SceneDelegate.swift in Sources */,
-				C7335B4429142FEB008739E6 /* GraduatingValidator.swift in Sources */,
+				C7335B4429142FEB008739E6 /* GraduatingYearValidator.swift in Sources */,
 				C78C1024290E4A420095BE85 /* Faculty.swift in Sources */,
 				C78C101A290E2D020095BE85 /* StudentDisplayViewController.swift in Sources */,
 				C78C1031290FEC210095BE85 /* PersonErrors.swift in Sources */,

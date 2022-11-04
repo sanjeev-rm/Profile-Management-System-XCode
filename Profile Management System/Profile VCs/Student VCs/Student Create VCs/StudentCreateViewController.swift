@@ -145,7 +145,7 @@ class StudentCreateViewController: UIViewController {
             catch DateError.invalidYearError
             {
                 dobYearTF.text = ""
-                dobYearTF.placeholder = "Invalid Year [Valid Minimum : 100]"
+                dobYearTF.placeholder = "Invalid Year [valid : contains 4 digits]"
                 messageLabel.text = "Please check your DOB inputs"
             }
             catch DateError.invalidMonthError
@@ -190,9 +190,21 @@ class StudentCreateViewController: UIViewController {
             }
             catch MobileError.typeMismatchError
             {
-                messageLabel.text = "Please check your mobile.digits"
+                messageLabel.text = "Please check your mobile digits"
                 mobileTF.text = ""
                 mobileTF.placeholder = "Invalid Mobile [valid : should contain digits]"
+            }
+            catch GraduatingYearError.typeMismatchError
+            {
+                messageLabel.text = "Please check your graduating year inputs"
+                graduatingYearTF.text = ""
+                graduatingYearTF.placeholder = "Invalid graduating year [valid : should only contain Integers]"
+            }
+            catch GraduatingYearError.invalidYearError
+            {
+                messageLabel.text = "Please check your graduating year inputs"
+                graduatingYearTF.text = ""
+                graduatingYearTF.placeholder = "Invalid [valid : contains 4 digits, In the future]"
             }
             catch
             {

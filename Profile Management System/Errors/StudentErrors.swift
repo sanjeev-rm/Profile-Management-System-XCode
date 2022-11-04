@@ -10,4 +10,5 @@ import Foundation
 enum GraduatingYearError : Error
 {
     case invalidYearError
+    case typeMismatchError
 }

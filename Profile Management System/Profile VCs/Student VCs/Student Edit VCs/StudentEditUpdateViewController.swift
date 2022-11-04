@@ -94,7 +94,7 @@ class StudentEditUpdateViewController: UIViewController {
         studentToEdit.setBranch(branch: branchTF.text!)
         studentToEdit.setSchool(school: schoolTF.text!)
         studentToEdit.setIsHosteller(isHosteller: hostellerTF.text!)
-        studentToEdit.setGraduatingYear(graduatingYear: Int(graduatingYearTF.text!)!)
+        try! studentToEdit.setGraduatingYear(graduatingYear: Int(graduatingYearTF.text!)!)
     }
     
     
