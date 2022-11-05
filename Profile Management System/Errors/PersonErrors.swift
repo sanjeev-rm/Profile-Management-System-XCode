@@ -39,3 +39,10 @@ enum MobileError : Error
     /// Error for when an String that's entered can't be converted to an Int value.
     case typeMismatchError
 }
+
+/// Contains errors of an address
+enum AddressError : Error
+{
+    /// Error for when the pincode of the address is invalid.
+    case invalidPincodeError
+}

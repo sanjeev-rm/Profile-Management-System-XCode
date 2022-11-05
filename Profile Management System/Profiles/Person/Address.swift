@@ -23,8 +23,12 @@ class Address : CustomStringConvertible
         return "\(self.houseNo), \(self.area), \(self.city), \(self.state), \(self.country), \(self.pincode)"
     }
     
-    init(houseNo : String, area : String, city : String, state : String, country : String, pincode : String)
+    /// - throws: AddressError.invalidPincodeError
+    init(houseNo : String, area : String, city : String, state : String, country : String, pincode : String) throws
     {
+        // To validate the pincode if not throws an error.
+        try AddressValidator.validatePincode(Pincode: pincode)
+        
         self.houseNo = houseNo
         self.area = area
         self.city = city
@@ -83,8 +87,10 @@ class Address : CustomStringConvertible
         return self.country
     }
     
-    func setPincode(pincode : String)
+    /// - throws: AddressError.invalidPincodeError
+    func setPincode(pincode : String) throws
     {
+        try AddressValidator.validatePincode(Pincode: pincode)
         self.pincode = pincode
     }
     

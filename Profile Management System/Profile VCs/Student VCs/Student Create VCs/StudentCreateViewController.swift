@@ -63,7 +63,7 @@ class StudentCreateViewController: UIViewController {
     // This function is called when the Create button is clicked and the user has filled all the text fields.
     /// This function creates a student profile and returns it.
     /// Creates an student instance with the text field inputs.
-    /// - throws: DateError, EmailError, MobileError.
+    /// - throws: DateError, EmailError, MobileError, AddressError, GraduatingYearError
     /// - returns: an instance of Student.
     func createStudentProfile() throws -> Student
     {
@@ -84,7 +84,7 @@ class StudentCreateViewController: UIViewController {
                                                MonthString: dobMonthTF.text!,
                                                DayString: dobDayTF.text!)
         
-        let studentAddress : Address = Address.init(houseNo: houseNoTF.text!,
+        let studentAddress : Address = try Address.init(houseNo: houseNoTF.text!,
                                                     area: areaTF.text!,
                                                     city: cityTF.text!,
                                                     state: stateTF.text!,
@@ -205,6 +205,12 @@ class StudentCreateViewController: UIViewController {
                 messageLabel.text = "Please check your graduating year inputs"
                 graduatingYearTF.text = ""
                 graduatingYearTF.placeholder = "Invalid [valid : contains 4 digits, In the future]"
+            }
+            catch AddressError.invalidPincodeError
+            {
+                messageLabel.text = "Please check your Pincode inputs"
+                pincodeTF.text = ""
+                pincodeTF.placeholder = "Invalid Pincode [valid : contains exactly 6 characters]"
             }
             catch
             {
