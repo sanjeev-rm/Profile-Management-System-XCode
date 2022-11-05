@@ -40,7 +40,7 @@ enum MobileError : Error
     case typeMismatchError
 }
 
-/// Contains errors of an address
+/// Contains errors of an address.
 enum AddressError : Error
 {
     /// Error for when the pincode of the address is invalid.

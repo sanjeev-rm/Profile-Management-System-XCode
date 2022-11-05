@@ -194,13 +194,37 @@ class StudentCreateViewController: UIViewController {
                 mobileTF.text = ""
                 mobileTF.placeholder = "Invalid Mobile [valid : should contain digits]"
             }
-            catch GraduatingYearError.typeMismatchError
+            catch StudentRegistrationNumberError.invalidRegistrationNumber
+            {
+                messageLabel.text = "Please check your registration number input"
+                registrationNoTF.text = ""
+                registrationNoTF.placeholder = "Invalid Registration number"
+            }
+            catch StudentProgramError.invalidProgramError
+            {
+                messageLabel.text = "please chek your program input"
+                programTF.text = ""
+                programTF.placeholder = "Invalid Program"
+            }
+            catch StudentBranchError.invalidBranchError
+            {
+                messageLabel.text = "Please check your branch input"
+                branchTF.text = ""
+                branchTF.placeholder = "Invalid Branch"
+            }
+            catch StudentSchoolError.invalidSchoolError
+            {
+                messageLabel.text = "Please check your school input"
+                schoolTF.text = ""
+                schoolTF.placeholder = "Invalid School"
+            }
+            catch StudentGraduatingYearError.typeMismatchError
             {
                 messageLabel.text = "Please check your graduating year inputs"
                 graduatingYearTF.text = ""
                 graduatingYearTF.placeholder = "Invalid graduating year [valid : should only contain Integers]"
             }
-            catch GraduatingYearError.invalidYearError
+            catch StudentGraduatingYearError.invalidYearError
             {
                 messageLabel.text = "Please check your graduating year inputs"
                 graduatingYearTF.text = ""

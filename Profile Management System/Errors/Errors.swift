@@ -7,7 +7,8 @@
 
 import Foundation
 
-enum CommonError : Error
+/// Errors contains the common erros that are common for all profiles.
+enum Errors : Error
 {
     case typeMismatchError
 }

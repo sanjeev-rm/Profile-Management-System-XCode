@@ -11,7 +11,10 @@ import Foundation
 class DateValidator
 {
     /// This function throws error if the string argument received can not be converted to an integer.
-    /// THROWS --> DateError.typeMismatchError
+    /// - throws: DateError.typeMismatchError
+    /// - parameter yearString: year as String
+    /// - parameter monthString: month of year as String
+    /// - parameter dayString: day of month as String
     static func validateType(yearString year : String, monthString month : String, dayString day : String) throws
     {
         // Condition to check if any of the string input cannot be converted to Int type. That means they are not numbers.
@@ -22,7 +25,8 @@ class DateValidator
     }
     
     /// This function validates year in a date.
-    /// THROWS --> DateError.invalidYearError
+    /// - throws: DateError.invalidYearError
+    /// - parameter year: year as Int
     static func validateYear(year : Int) throws
     {
         // Throws error if the year entered has no.of digits lesser than 4 or greater than 4.
@@ -34,7 +38,8 @@ class DateValidator
     }
     
     /// This function validates month in a date.
-    /// THROWS --> DateError.invalidMonthError
+    /// - throws: DateError.invalidMonthError
+    /// - parameter month: month of year as Int
     static func validateMonth(month : Int) throws
     {
         // Condition to check if the month entered is less than 1 or greater than 12.
@@ -45,7 +50,8 @@ class DateValidator
     }
     
     /// This function validates day in a date.
-    /// THROWS --> DateError.invalidDayError
+    /// - throws: DateError.invalidDayError
+    /// - parameter day: day of month as Int
     static func validateDay(day : Int) throws
     {
         // Condition to check if the day enetered is less than 1 or greater than 31.

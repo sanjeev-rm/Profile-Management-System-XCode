@@ -7,8 +7,33 @@
 
 import Foundation
 
+/// Contains errors of Registration number.
+enum StudentRegistrationNumberError : Error
+{
+    /// Error for when the registration number is invalid.
+    case invalidRegistrationNumber
+}
+
+/// Contains erros of Program.
+enum StudentProgramError : Error
+{
+    case invalidProgramError
+}
+
+/// Contains errors of Branch.
+enum StudentBranchError : Error
+{
+    case invalidBranchError
+}
+
+/// Contains errors of School.
+enum StudentSchoolError : Error
+{
+    case invalidSchoolError
+}
+
 /// Contains errors of Graduating Year.
-enum GraduatingYearError : Error
+enum StudentGraduatingYearError : Error
 {
     /// Error for when year is invalid.
     case invalidYearError

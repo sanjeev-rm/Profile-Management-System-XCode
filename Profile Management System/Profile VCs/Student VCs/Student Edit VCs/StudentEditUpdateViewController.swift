@@ -82,17 +82,17 @@ class StudentEditUpdateViewController: UIViewController {
         
         try! studentToEdit.setMobile(mobile: mobileTF.text!)
         
-        studentToEdit.setAddress(address: Address.init(houseNo: addressHouseNoTF.text!,
+        studentToEdit.setAddress(address: try! Address.init(houseNo: addressHouseNoTF.text!,
                                                        area: addressAreaTF.text!,
                                                        city: addressCityTF.text!,
                                                        state: addressStateTF.text!,
                                                        country: addressCountryTF.text!,
                                                        pincode: addressPincodeTF.text!))
         
-        studentToEdit.setRegistrationNumber(registrationNumber: registrationNumberTF.text!)
-        studentToEdit.setProgram(program: programTF.text!)
-        studentToEdit.setBranch(branch: branchTF.text!)
-        studentToEdit.setSchool(school: schoolTF.text!)
+        try! studentToEdit.setRegistrationNumber(registrationNumber: registrationNumberTF.text!)
+        try! studentToEdit.setProgram(program: programTF.text!)
+        try! studentToEdit.setBranch(branch: branchTF.text!)
+        try! studentToEdit.setSchool(school: schoolTF.text!)
         studentToEdit.setIsHosteller(isHosteller: hostellerTF.text!)
         try! studentToEdit.setGraduatingYear(graduatingYear: Int(graduatingYearTF.text!)!)
     }

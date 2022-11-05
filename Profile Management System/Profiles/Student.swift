@@ -21,14 +21,22 @@ class Student : Person
     // Here in swift super class's initializer(constructor) should come after the child class's initializer(constructor).
     // Unlike in java where the super class's constructor comes first then the child class's properties are initialized.
     /// Initializer.
-    /// - Throws: GraduatingYearError.typeMismatchError, GraduatingYearError.invalidYearError, EmailError.invalidEmailError, EmailError.invalidRecipientNameError, EmailError.invalidDomainNameError, MobileError.typeMismatchError, MobileError.lengthInvalidError.
+    /// - Throws: GraduatingYearError.typeMismatchError, GraduatingYearError.invalidYearError, EmailError.invalidEmailError, EmailError.invalidRecipientNameError, EmailError.invalidDomainNameError, MobileError.typeMismatchError, MobileError.lengthInvalidError, StudentRegistrationNumberError.invalidRegistrationNumberError
     init(Name name : Name, Gender gender : String, DateOfBirth dob : Date, Email email : String, MobileNumber  mobile : String, Address address : Address, RegistrationNumber registrationNumber : String, Program program : String, Branch branch : String, School school : String, IsHosteller isHosteller : String, GraduatingYear graduatingYear : String) throws
     {
+        // This validates the info entered. and throws errors if not valid.
+        try StudentValidator.validateRegistrationNumber(RegNo: registrationNumber)
+        try StudentValidator.validateProgram(Program: program)
+        try StudentValidator.validateBranch(Branch: branch)
+        try StudentValidator.validateSchool(School: school)
+        
         // This checks if the input that is string can be converted to an Int. If not it means it contains characters other than numbers.
         if(Int(graduatingYear) == nil)
         {
-            throw GraduatingYearError.typeMismatchError
+            throw StudentGraduatingYearError.typeMismatchError
         }
+        // This is to validate if the Graduating year after making sure it's an Int, if it's valid to be an year.
+        try StudentValidator.validateGraduatingYear(GraduatingYear: Int(graduatingYear)!)
         
         self.registrationNumber = registrationNumber
         self.program = program
@@ -40,13 +48,11 @@ class Student : Person
         
         // This initializes isHosteller variable to either "YES" or "NO" according to the argument.
         self.setIsHosteller(isHosteller: isHosteller)
-        
-        // This is to validate if the Graduating year after making sure it's an Int, if it's valid to be an year.
-        try GraduatingYearValidator.validateGraduatingYear(GraduatingYear: self.graduatingYear)
     }
     
-    func setRegistrationNumber(registrationNumber : String)
+    func setRegistrationNumber(registrationNumber : String) throws
     {
+        try StudentValidator.validateRegistrationNumber(RegNo: registrationNumber)
         self.registrationNumber = registrationNumber
     }
     
@@ -55,8 +61,9 @@ class Student : Person
         return self.registrationNumber
     }
     
-    func setProgram(program : String)
+    func setProgram(program : String) throws
     {
+        try StudentValidator.validateProgram(Program: program)
         self.program = program
     }
     
@@ -65,8 +72,9 @@ class Student : Person
         return self.program
     }
     
-    func setBranch(branch : String)
+    func setBranch(branch : String) throws
     {
+        try StudentValidator.validateBranch(Branch: branch)
         self.branch = branch
     }
     
@@ -75,8 +83,9 @@ class Student : Person
         return self.branch
     }
     
-    func setSchool(school : String)
+    func setSchool(school : String) throws
     {
+        try StudentValidator.validateSchool(School: school)
         self.school = school
     }
     
@@ -105,8 +114,7 @@ class Student : Person
     
     func setGraduatingYear(graduatingYear : Int) throws
     {
-        try GraduatingYearValidator.validateGraduatingYear(GraduatingYear: graduatingYear)
-        
+        try StudentValidator.validateGraduatingYear(GraduatingYear: graduatingYear)
         self.graduatingYear = graduatingYear
     }
     
