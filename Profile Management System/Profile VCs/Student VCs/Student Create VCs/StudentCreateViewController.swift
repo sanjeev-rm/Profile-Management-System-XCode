@@ -9,6 +9,8 @@ import UIKit
 
 class StudentCreateViewController: UIViewController {
 
+    /// **TEXT FIELDS **
+    
     @IBOutlet weak var firstNameTF: UITextField!
     @IBOutlet weak var middleNameTF: UITextField!
     @IBOutlet weak var lastNameTF: UITextField!
@@ -37,25 +39,104 @@ class StudentCreateViewController: UIViewController {
     @IBOutlet weak var isHostellerTF: UITextField!
     @IBOutlet weak var graduatingYearTF: UITextField!
     
+    /// **ERROR LABELS**
+    
+    @IBOutlet weak var firstNameErrorLabel: UILabel!
+    @IBOutlet weak var middleNameErrorLabel: UILabel!
+    @IBOutlet weak var lastNameErrorLabel: UILabel!
+    
+    @IBOutlet weak var genderErrorLabel: UILabel!
+    
+    @IBOutlet weak var dobYearErrorLabel: UILabel!
+    @IBOutlet weak var dobMonthErrorLabel: UILabel!
+    @IBOutlet weak var dobDayErrorLabel: UILabel!
+    
+    @IBOutlet weak var emailErrorLabel: UILabel!
+    
+    @IBOutlet weak var mobileErrorLabel: UILabel!
+    
+    @IBOutlet weak var addressHouseNoErrorLabel: UILabel!
+    @IBOutlet weak var addressAreaErrorLabel: UILabel!
+    @IBOutlet weak var addressCityErrorLabel: UILabel!
+    @IBOutlet weak var addressStateErrorLabel: UILabel!
+    @IBOutlet weak var addressCountryErrorLabel: UILabel!
+    @IBOutlet weak var addressPincodeErrorLabel: UILabel!
+    
+    @IBOutlet weak var studentRegistrationNoErrorLabel: UILabel!
+    @IBOutlet weak var studentProgramErrorLabel: UILabel!
+    @IBOutlet weak var studentBranchErrorLabel: UILabel!
+    @IBOutlet weak var studentSchoolErrorLabel: UILabel!
+    @IBOutlet weak var studentHostellerErrorLabel: UILabel!
+    @IBOutlet weak var studentGraduatingYearErrorLabel: UILabel!
+    
+    /// Error message label that is shown at the end of the view / page.
     @IBOutlet weak var messageLabel: UILabel!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        /// This resets the error labels to "".
+        resetErrorLabels()
+    }
+    
+    
+    
+    /// This function returns an array of all the TextFields in this View(Class).
+    /// The elements are arranged in order respective to the View.
+    /// - returns: [UITextField]
+    func getTextFieldsArray() -> [UITextField]
+    {
+        let textFieldsArray : [UITextField] = [firstNameTF, middleNameTF, lastNameTF, genderTF, dobYearTF, dobMonthTF, dobDayTF, emailTF, mobileTF, houseNoTF, areaTF, cityTF, stateTF, countryTF, pincodeTF, registrationNoTF, programTF, branchTF, schoolTF, isHostellerTF, graduatingYearTF]
+        return textFieldsArray
+    }
+    
+    
+    
+    /// This function returns array of all the Labels in this View(Class).
+    /// The elements are arranged in order with respective to the View.
+    /// - returns: [UILabel]
+    func getErrorLabelsArray() -> [UILabel]
+    {
+        let errorLabelsArray : [UILabel] = [firstNameErrorLabel, middleNameErrorLabel, lastNameErrorLabel, genderErrorLabel, dobYearErrorLabel, dobMonthErrorLabel, dobDayErrorLabel, emailErrorLabel, mobileErrorLabel, addressHouseNoErrorLabel, addressAreaErrorLabel, addressCityErrorLabel, addressStateErrorLabel, addressCountryErrorLabel, addressPincodeErrorLabel, studentRegistrationNoErrorLabel, studentProgramErrorLabel, studentBranchErrorLabel, studentSchoolErrorLabel, studentHostellerErrorLabel, studentGraduatingYearErrorLabel]
+        return errorLabelsArray
+    }
+    
+    
+    
+    /// This function resets all the error labels.
+    /// It resets all the labels to "".
+    func resetErrorLabels()
+    {
+        for errorlabel in getErrorLabelsArray()
+        {
+            errorlabel.text = ""
+        }
     }
     
     
     
     /// This function checks if any of the text field is empty.
-    /// - returns: true if none of the text firlds are empty. false if any of the text field is empty.
+    /// If any field is empty then changes the error label of the respective field to "Empty".
+    /// - returns: true if none of the text fields are empty. false if any of the text field is empty.
     func isAnyFieldEmpty() -> Bool
     {
-        if(firstNameTF.hasText && middleNameTF.hasText && lastNameTF.hasText && genderTF.hasText && dobYearTF.hasText && dobMonthTF.hasText && dobDayTF.hasText && emailTF.hasText && mobileTF.hasText && houseNoTF.hasText && areaTF.hasText && cityTF.hasText && stateTF.hasText && countryTF.hasText && pincodeTF.hasText && registrationNoTF.hasText && programTF.hasText && branchTF.hasText && schoolTF.hasText && isHostellerTF.hasText && graduatingYearTF.hasText)
+        var index = 0;
+        var isEmpty = false;
+        for textField in getTextFieldsArray()
         {
-            return false
+            if(!textField.hasText)
+            {
+                getErrorLabelsArray()[index].text = "Empty"
+                isEmpty = true
+            }
+            index+=1
         }
-        return true
+        
+        return isEmpty
     }
     
     
@@ -123,6 +204,9 @@ class StudentCreateViewController: UIViewController {
     /// If all the fields are filled then performs segue to the profile created VC scene.
     @IBAction func tapCreate(_ sender: UIButton)
     {
+        // This resets all the old error labels.
+        resetErrorLabels()
+        
         if(isAnyFieldEmpty())
         {
             messageLabel.text = "All fields are compulsory"

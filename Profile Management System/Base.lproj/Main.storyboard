@@ -1047,28 +1047,49 @@
                     </view>
                     <navigationItem key="navigationItem" title="Create Profile" id="sjR-bd-o8N"/>
                     <connections>
+                        <outlet property="addressAreaErrorLabel" destination="3a4-es-8gA" id="2Y7-cf-KHH"/>
+                        <outlet property="addressCityErrorLabel" destination="A4Y-Yi-z30" id="dGd-XM-iCZ"/>
+                        <outlet property="addressCountryErrorLabel" destination="Ueo-ff-hLn" id="l2F-6m-e4B"/>
+                        <outlet property="addressHouseNoErrorLabel" destination="zDA-EZ-zPi" id="2GF-0t-Kn7"/>
+                        <outlet property="addressPincodeErrorLabel" destination="T6N-R6-Oaj" id="s4F-zK-mxh"/>
+                        <outlet property="addressStateErrorLabel" destination="8d4-rw-68i" id="83b-N8-yrz"/>
                         <outlet property="areaTF" destination="1wC-oX-Rsb" id="Ezx-ku-xSw"/>
                         <outlet property="branchTF" destination="gh7-xm-pg2" id="FQX-SU-eXd"/>
                         <outlet property="cityTF" destination="zzF-sO-Fec" id="KeE-Rv-tZe"/>
                         <outlet property="countryTF" destination="rVW-vg-PzX" id="o7G-jH-ybG"/>
+                        <outlet property="dobDayErrorLabel" destination="CGI-BK-ziP" id="bfp-A8-6Ke"/>
                         <outlet property="dobDayTF" destination="rno-Ho-BXG" id="ycg-hg-sbX"/>
+                        <outlet property="dobMonthErrorLabel" destination="Rck-iE-AWA" id="Cwn-FO-e4q"/>
                         <outlet property="dobMonthTF" destination="qfn-IB-uNd" id="bJg-Ur-uZ4"/>
+                        <outlet property="dobYearErrorLabel" destination="uL4-M5-nQx" id="PbD-xc-bWk"/>
                         <outlet property="dobYearTF" destination="6ue-ok-6en" id="Pzj-lf-mMv"/>
+                        <outlet property="emailErrorLabel" destination="OWs-Fu-SG4" id="zeu-Rs-ast"/>
                         <outlet property="emailTF" destination="Q0C-qn-2od" id="nDx-dq-Snx"/>
+                        <outlet property="firstNameErrorLabel" destination="TBr-Hp-16f" id="k6j-q6-cnL"/>
                         <outlet property="firstNameTF" destination="2Vo-XN-4F1" id="elc-F4-VL5"/>
+                        <outlet property="genderErrorLabel" destination="KxA-tg-QT5" id="dqD-qH-IlJ"/>
                         <outlet property="genderTF" destination="dfd-YG-HXd" id="Api-es-p6w"/>
                         <outlet property="graduatingYearTF" destination="fL9-Y7-6QA" id="mW0-VW-uAV"/>
                         <outlet property="houseNoTF" destination="aQh-tl-co1" id="faV-xX-9Hw"/>
                         <outlet property="isHostellerTF" destination="ePE-PX-8Wq" id="XvW-67-4Rc"/>
+                        <outlet property="lastNameErrorLabel" destination="fk2-X7-zic" id="jmh-HY-Oft"/>
                         <outlet property="lastNameTF" destination="6lx-rM-6ph" id="g8p-nt-JPG"/>
                         <outlet property="messageLabel" destination="uua-pB-pGn" id="qK4-am-vm8"/>
+                        <outlet property="middleNameErrorLabel" destination="Rvz-70-eIr" id="MXb-Gp-OGn"/>
                         <outlet property="middleNameTF" destination="H7E-Ts-Vwp" id="DQS-NG-Oi8"/>
+                        <outlet property="mobileErrorLabel" destination="GQe-Ey-wX2" id="Tcr-eE-pfU"/>
                         <outlet property="mobileTF" destination="g67-5V-obT" id="KYn-hC-1Bv"/>
                         <outlet property="pincodeTF" destination="QCf-Dy-t1Y" id="f5A-8G-9OM"/>
                         <outlet property="programTF" destination="YWf-Ky-y4r" id="pqV-hl-2Ll"/>
                         <outlet property="registrationNoTF" destination="qVN-xN-O58" id="tLM-Z9-BLj"/>
                         <outlet property="schoolTF" destination="wDR-eq-w4L" id="76r-xd-GSq"/>
                         <outlet property="stateTF" destination="ONx-pg-Bb7" id="YDG-6n-g6f"/>
+                        <outlet property="studentBranchErrorLabel" destination="mI8-gk-kWI" id="HnK-Ur-HIq"/>
+                        <outlet property="studentGraduatingYearErrorLabel" destination="EAp-cL-dVI" id="SE0-lV-ZR8"/>
+                        <outlet property="studentHostellerErrorLabel" destination="FVB-7P-h9K" id="jNl-XN-h23"/>
+                        <outlet property="studentProgramErrorLabel" destination="1Ox-Tq-Rj8" id="gbi-Qc-zpL"/>
+                        <outlet property="studentRegistrationNoErrorLabel" destination="TPr-Fh-f9r" id="1Bi-9X-UpU"/>
+                        <outlet property="studentSchoolErrorLabel" destination="DcK-vS-4rK" id="Xal-RH-yBg"/>
                         <segue destination="lA5-rg-ZOn" kind="show" identifier="studentCreatedSegue" id="4RL-40-MqY"/>
                     </connections>
                 </viewController>
