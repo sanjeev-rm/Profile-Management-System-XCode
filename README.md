@@ -1,6 +1,8 @@
 # Profile-Management-System-XCode [Version 1.3.O.1]
 This is the iOS Application of Profile management system.
 
+This is the version 1.3.O.1 of Profile Management System VIT.
+
 # The Project
 ## Profile-Management-VIT
 
