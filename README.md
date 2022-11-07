@@ -30,6 +30,6 @@ This is the iOS Application of Profile management system.
 
 - 26th September, 2022 : Currently we are working on the Version 1.0
 
-- 16th October, 2022   : Finished Version 1.0 (Beta)
+- 16th October, 2022 : Finished Version 1.0 (Beta)
 
-- 22th October, 2022   : Started creating Version 1.3.O.1
+- 22th October, 2022 : Started creating Version 1.3.O.1
