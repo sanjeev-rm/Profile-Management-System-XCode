@@ -206,6 +206,7 @@ class StudentCreateViewController: UIViewController {
     {
         // This resets all the old error labels.
         resetErrorLabels()
+        messageLabel.text = ""
         
         if(isAnyFieldEmpty())
         {
@@ -228,20 +229,17 @@ class StudentCreateViewController: UIViewController {
             }
             catch DateError.invalidYearError
             {
-                dobYearTF.text = ""
-                dobYearTF.placeholder = "Invalid Year [valid : contains 4 digits]"
+                dobYearErrorLabel.text = "Invalid Year [valid : contains 4 digits]"
                 messageLabel.text = "Please check your DOB inputs"
             }
             catch DateError.invalidMonthError
             {
-                dobMonthTF.text = ""
-                dobMonthTF.placeholder = "Invalid Month [valid : 1 - 12]"
+                dobMonthErrorLabel.text = "Invalid Month [valid : 1 - 12]"
                 messageLabel.text = "Please check your DOB inputs"
             }
             catch DateError.invalidDayError
             {
-                dobDayTF.text = ""
-                dobDayTF.placeholder = "Invalid Day of month [valid : 1 - 31 / 29]"
+                dobYearErrorLabel.text = "Invalid Day of month [valid : 1 - 31 / 29]"
                 messageLabel.text = "Please check your DOB"
             }
             catch DateError.typeMismatchError
@@ -250,75 +248,63 @@ class StudentCreateViewController: UIViewController {
             }
             catch EmailError.invalidEmailError
             {
+                emailErrorLabel.text = "Invalid Email"
                 messageLabel.text = "Please check your email"
-                emailTF.text = ""
-                emailTF.placeholder = "Invalid Email"
             }
             catch EmailError.invalidRecipientNameError
             {
+                emailErrorLabel.text = "Invalid Email [Invalid recipient name]"
                 messageLabel.text = "Please check your email"
-                emailTF.text = ""
-                emailTF.placeholder = "Invalid Email [Invalid recipient name]"
             }
             catch EmailError.invalidDomainNameError
             {
+                emailErrorLabel.text = "Invalid Email [invalid domain name]"
                 messageLabel.text = "Please check your email"
-                emailTF.text = ""
-                emailTF.placeholder = "Invalid Email [invalid domain name]"
             }
             catch MobileError.lengthInvalidError
             {
+                mobileErrorLabel.text = "Invalid Mobile [valid no of digits : min-7, max-15]"
                 messageLabel.text = "Please check your mobile digits"
-                mobileTF.text = ""
-                mobileTF.placeholder = "Invalid Mobile [valid no of digits : min-7, max-15]"
             }
             catch MobileError.typeMismatchError
             {
+                mobileErrorLabel.text = "Invalid Mobile [valid : should contain digits]"
                 messageLabel.text = "Please check your mobile digits"
-                mobileTF.text = ""
-                mobileTF.placeholder = "Invalid Mobile [valid : should contain digits]"
             }
             catch StudentRegistrationNumberError.invalidRegistrationNumber
             {
+                studentRegistrationNoErrorLabel.text = "Invalid Registration number"
                 messageLabel.text = "Please check your registration number input"
-                registrationNoTF.text = ""
-                registrationNoTF.placeholder = "Invalid Registration number"
             }
             catch StudentProgramError.invalidProgramError
             {
+                studentProgramErrorLabel.text = "Invalid Program"
                 messageLabel.text = "please chek your program input"
-                programTF.text = ""
-                programTF.placeholder = "Invalid Program"
             }
             catch StudentBranchError.invalidBranchError
             {
+                studentBranchErrorLabel.text = "Invalid Branch"
                 messageLabel.text = "Please check your branch input"
-                branchTF.text = ""
-                branchTF.placeholder = "Invalid Branch"
             }
             catch StudentSchoolError.invalidSchoolError
             {
+                studentSchoolErrorLabel.text = "Invalid School"
                 messageLabel.text = "Please check your school input"
-                schoolTF.text = ""
-                schoolTF.placeholder = "Invalid School"
             }
             catch StudentGraduatingYearError.typeMismatchError
             {
+                studentGraduatingYearErrorLabel.text = "Invalid graduating year [valid : should only contain Integers]"
                 messageLabel.text = "Please check your graduating year inputs"
-                graduatingYearTF.text = ""
-                graduatingYearTF.placeholder = "Invalid graduating year [valid : should only contain Integers]"
             }
             catch StudentGraduatingYearError.invalidYearError
             {
+                studentGraduatingYearErrorLabel.text = "Invalid [valid : contains 4 digits, In the future]"
                 messageLabel.text = "Please check your graduating year inputs"
-                graduatingYearTF.text = ""
-                graduatingYearTF.placeholder = "Invalid [valid : contains 4 digits, In the future]"
             }
             catch AddressError.invalidPincodeError
             {
+                addressPincodeErrorLabel.text = "Invalid Pincode [valid : contains exactly 6 characters]"
                 messageLabel.text = "Please check your Pincode inputs"
-                pincodeTF.text = ""
-                pincodeTF.placeholder = "Invalid Pincode [valid : contains exactly 6 characters]"
             }
             catch
             {
