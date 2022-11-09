@@ -25,12 +25,12 @@ class StudentCreateViewController: UIViewController {
     
     @IBOutlet weak var mobileTF: UITextField!
     
-    @IBOutlet weak var houseNoTF: UITextField!
-    @IBOutlet weak var areaTF: UITextField!
-    @IBOutlet weak var cityTF: UITextField!
-    @IBOutlet weak var stateTF: UITextField!
-    @IBOutlet weak var countryTF: UITextField!
-    @IBOutlet weak var pincodeTF: UITextField!
+    @IBOutlet weak var addressHouseNoTF: UITextField!
+    @IBOutlet weak var addressAreaTF: UITextField!
+    @IBOutlet weak var addressCityTF: UITextField!
+    @IBOutlet weak var addressStateTF: UITextField!
+    @IBOutlet weak var addressCountryTF: UITextField!
+    @IBOutlet weak var addressPincodeTF: UITextField!
     
     @IBOutlet weak var registrationNoTF: UITextField!
     @IBOutlet weak var programTF: UITextField!
@@ -90,7 +90,7 @@ class StudentCreateViewController: UIViewController {
     /// - returns: [UITextField]
     func getTextFieldsArray() -> [UITextField]
     {
-        let textFieldsArray : [UITextField] = [firstNameTF, middleNameTF, lastNameTF, genderTF, dobYearTF, dobMonthTF, dobDayTF, emailTF, mobileTF, houseNoTF, areaTF, cityTF, stateTF, countryTF, pincodeTF, registrationNoTF, programTF, branchTF, schoolTF, isHostellerTF, graduatingYearTF]
+        let textFieldsArray : [UITextField] = [firstNameTF, middleNameTF, lastNameTF, genderTF, dobYearTF, dobMonthTF, dobDayTF, emailTF, mobileTF, addressHouseNoTF, addressAreaTF, addressCityTF, addressStateTF, addressCountryTF, addressPincodeTF, registrationNoTF, programTF, branchTF, schoolTF, isHostellerTF, graduatingYearTF]
         return textFieldsArray
     }
     
@@ -165,12 +165,12 @@ class StudentCreateViewController: UIViewController {
                                                MonthString: dobMonthTF.text!,
                                                DayString: dobDayTF.text!)
         
-        let studentAddress : Address = try Address.init(houseNo: houseNoTF.text!,
-                                                    area: areaTF.text!,
-                                                    city: cityTF.text!,
-                                                    state: stateTF.text!,
-                                                    country: countryTF.text!,
-                                                    pincode: pincodeTF.text!)
+        let studentAddress : Address = try Address.init(houseNo: addressHouseNoTF.text!,
+                                                    area: addressAreaTF.text!,
+                                                    city: addressCityTF.text!,
+                                                    state: addressStateTF.text!,
+                                                    country: addressCountryTF.text!,
+                                                    pincode: addressPincodeTF.text!)
         
         // This is defining and initializing an variable according to a condition.
         var studentIsHosteller : String

@@ -2290,7 +2290,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="15" id="eYp-r0-nBD"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" systemColor="systemRedColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -2319,7 +2319,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="15" id="1eE-Fo-Bez"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" systemColor="systemRedColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -2348,7 +2348,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="15" id="2R4-H9-mTj"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" systemColor="systemRedColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -2383,7 +2383,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="15" id="Ycw-Zc-AKe"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" systemColor="systemRedColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -3090,28 +3090,49 @@
                     </view>
                     <navigationItem key="navigationItem" title="Update Profile" prompt="Edit Profile" id="o6w-PJ-zcD"/>
                     <connections>
+                        <outlet property="addressAreaErrorLabel" destination="aZ8-lK-5S8" id="YeC-mo-a2o"/>
                         <outlet property="addressAreaTF" destination="LJC-gk-TGF" id="GYR-jQ-nF7"/>
+                        <outlet property="addressCityErrorLabel" destination="FD4-du-RjL" id="Lf5-cm-e6S"/>
                         <outlet property="addressCityTF" destination="JL9-n0-mNd" id="MmM-K0-nOW"/>
+                        <outlet property="addressCountryErrorLabel" destination="HWm-n1-dGZ" id="UcS-Tr-Pg5"/>
                         <outlet property="addressCountryTF" destination="PHF-vQ-0LX" id="8z1-yY-urz"/>
+                        <outlet property="addressHouseNoErrorLabel" destination="UQ3-8c-QUL" id="T10-h0-PyV"/>
                         <outlet property="addressHouseNoTF" destination="87h-Hg-oFc" id="Sbq-Kl-ngc"/>
+                        <outlet property="addressPincodeErrorLabel" destination="FaQ-A2-2Am" id="Xnb-2h-2sI"/>
                         <outlet property="addressPincodeTF" destination="JCZ-fe-VKi" id="dae-eK-PsY"/>
+                        <outlet property="addressStateErrorLabel" destination="fN1-0Z-1tF" id="yIF-vb-Ibz"/>
                         <outlet property="addressStateTF" destination="mFm-6G-9g0" id="Ii5-My-T6i"/>
                         <outlet property="branchTF" destination="dgR-qT-DLP" id="5cj-TC-NAU"/>
+                        <outlet property="dobDayErrorLabel" destination="3CV-U0-C2N" id="wrg-NK-VsF"/>
                         <outlet property="dobDayTF" destination="nXb-1h-cKJ" id="OZK-nn-cWV"/>
+                        <outlet property="dobMonthErrorLabel" destination="L94-0j-Vhb" id="ShW-eN-SkR"/>
                         <outlet property="dobMonthTF" destination="TAf-57-W69" id="KKD-5q-Fwr"/>
+                        <outlet property="dobYearErrorLabel" destination="K8P-la-cRd" id="NAT-dp-A8j"/>
                         <outlet property="dobYearTF" destination="5Vl-cL-8d0" id="rYc-HE-xNK"/>
+                        <outlet property="emailErrorLabel" destination="mba-xZ-4Zm" id="zxn-2h-AoP"/>
                         <outlet property="emailTF" destination="aHc-2O-8n6" id="jto-Yc-DtL"/>
+                        <outlet property="firstNameErrorLabel" destination="sc6-6T-n3Z" id="kYq-lw-UtP"/>
                         <outlet property="firstNameTF" destination="Yyn-oq-qRM" id="oLf-06-pKd"/>
+                        <outlet property="genderErrorLabel" destination="KzU-6K-Nxz" id="4uL-W9-d3k"/>
                         <outlet property="genderTF" destination="QMg-BD-2bj" id="kl3-4d-ReD"/>
                         <outlet property="graduatingYearTF" destination="SA5-I4-OXs" id="Z9Z-PK-BuE"/>
                         <outlet property="hostellerTF" destination="F5A-H3-Lm7" id="75H-YG-98K"/>
+                        <outlet property="lastNameErrorLabel" destination="1N3-Xr-EQV" id="yxC-ml-IJN"/>
                         <outlet property="lastNameTF" destination="f8q-he-aed" id="c2E-Am-vnU"/>
-                        <outlet property="messageTF" destination="F5T-8O-OET" id="OD4-Ca-Sem"/>
+                        <outlet property="messageLabel" destination="F5T-8O-OET" id="OD4-Ca-Sem"/>
+                        <outlet property="middleNameErrorLabel" destination="6xh-eR-Aa0" id="u7Q-EK-s4d"/>
                         <outlet property="middleNameTF" destination="XeD-E2-P14" id="E9r-ef-r4M"/>
+                        <outlet property="mobileErrorLabel" destination="gdL-Cv-kuf" id="CKv-Sb-NM6"/>
                         <outlet property="mobileTF" destination="NH2-sW-tf2" id="Mgq-Fn-1fC"/>
                         <outlet property="programTF" destination="wjj-Qu-Xt4" id="ETr-aQ-hGj"/>
                         <outlet property="registrationNumberTF" destination="V5l-dz-gSt" id="Z9T-A0-3gc"/>
                         <outlet property="schoolTF" destination="Nen-qj-FMx" id="D0G-7r-Q9q"/>
+                        <outlet property="studentBranchErrorLabel" destination="7xA-fQ-cr8" id="TMH-A9-bA0"/>
+                        <outlet property="studentGraduatingYearErrorLabel" destination="cOh-mc-Fh7" id="0Ml-Xt-3f6"/>
+                        <outlet property="studentHostellerErrorLabel" destination="CUO-Vx-gBK" id="7An-dU-uCc"/>
+                        <outlet property="studentProgramErrorLabel" destination="wMf-Lh-Mtg" id="CU3-gh-zbA"/>
+                        <outlet property="studentRegistrationNoErrorLabel" destination="cVg-zu-MgH" id="Tg1-ct-3V4"/>
+                        <outlet property="studentSchoolErrorLabel" destination="acr-Tc-LW5" id="gy9-We-vKD"/>
                         <segue destination="lA5-rg-ZOn" kind="show" identifier="studentEditedSegue" id="OLg-f6-OIJ"/>
                     </connections>
                 </viewController>
@@ -4562,15 +4583,18 @@
                     <navigationItem key="navigationItem" title="Create Profile" id="Onz-1Z-dps"/>
                     <connections>
                         <outlet property="addressAreaErrorLabel" destination="jIy-Gj-pDJ" id="LP3-U5-YNW"/>
+                        <outlet property="addressAreaTF" destination="KAR-Cz-OSv" id="6IH-eZ-4TN"/>
                         <outlet property="addressCityErrorLabel" destination="fDs-NJ-b8h" id="Roo-W0-hHR"/>
+                        <outlet property="addressCityTF" destination="gs8-Ef-FMf" id="UGP-7S-RWE"/>
                         <outlet property="addressCountryErrorLabel" destination="cbt-6g-nT8" id="8sW-Ih-13m"/>
+                        <outlet property="addressCountryTF" destination="vdz-mc-52I" id="8Bn-OY-dpJ"/>
                         <outlet property="addressHouseNoErrorLabel" destination="KYe-Op-mT7" id="nbd-6O-xsI"/>
+                        <outlet property="addressHouseNoTF" destination="o5g-Zm-JIL" id="U9i-TN-M4o"/>
                         <outlet property="addressPincodeErrorLabel" destination="huS-MM-89r" id="zkT-po-HRx"/>
+                        <outlet property="addressPincodeTF" destination="tFn-Nm-Edx" id="lQA-rf-bJ0"/>
                         <outlet property="addressStateErrorLabel" destination="3Mo-nQ-dJE" id="Rb7-QH-mO6"/>
-                        <outlet property="areaTF" destination="KAR-Cz-OSv" id="6IH-eZ-4TN"/>
+                        <outlet property="addressStateTF" destination="EOZ-i5-iJF" id="4gH-qx-TXM"/>
                         <outlet property="branchTF" destination="lsO-UA-UvI" id="5GW-YT-mxY"/>
-                        <outlet property="cityTF" destination="gs8-Ef-FMf" id="UGP-7S-RWE"/>
-                        <outlet property="countryTF" destination="vdz-mc-52I" id="8Bn-OY-dpJ"/>
                         <outlet property="dobDayErrorLabel" destination="GB8-eD-Po0" id="qvL-No-aBm"/>
                         <outlet property="dobDayTF" destination="ufd-pv-eyB" id="FOR-mM-lIm"/>
                         <outlet property="dobMonthErrorLabel" destination="8nr-6S-SAe" id="OQn-wo-03I"/>
@@ -4584,7 +4608,6 @@
                         <outlet property="genderErrorLabel" destination="Mkk-qw-F35" id="2nK-Ft-Bkm"/>
                         <outlet property="genderTF" destination="VcI-bq-S4v" id="gWP-K9-VWv"/>
                         <outlet property="graduatingYearTF" destination="goM-C5-KoP" id="xsG-ZV-Irh"/>
-                        <outlet property="houseNoTF" destination="o5g-Zm-JIL" id="U9i-TN-M4o"/>
                         <outlet property="isHostellerTF" destination="GdB-sF-Bdx" id="hD4-gl-Pt8"/>
                         <outlet property="lastNameErrorLabel" destination="3gg-nM-knv" id="utX-IQ-8TX"/>
                         <outlet property="lastNameTF" destination="a2h-6f-DwN" id="oSC-t5-dkI"/>
@@ -4593,11 +4616,9 @@
                         <outlet property="middleNameTF" destination="8R3-0n-kos" id="0SY-2y-Rzq"/>
                         <outlet property="mobileErrorLabel" destination="iYm-WC-vsq" id="qak-n0-AlP"/>
                         <outlet property="mobileTF" destination="a5o-qw-rUy" id="seK-8S-rCV"/>
-                        <outlet property="pincodeTF" destination="tFn-Nm-Edx" id="lQA-rf-bJ0"/>
                         <outlet property="programTF" destination="xux-VK-slX" id="cOP-mJ-0RY"/>
                         <outlet property="registrationNoTF" destination="KS0-zU-VXp" id="SAD-S4-357"/>
                         <outlet property="schoolTF" destination="f7O-Ff-bbl" id="QdV-8K-bcu"/>
-                        <outlet property="stateTF" destination="EOZ-i5-iJF" id="4gH-qx-TXM"/>
                         <outlet property="studentBranchErrorLabel" destination="qe0-IK-jxu" id="Irz-oL-fD1"/>
                         <outlet property="studentGraduatingYearErrorLabel" destination="ivP-pg-ToX" id="mhw-XW-aE6"/>
                         <outlet property="studentHostellerErrorLabel" destination="Nq3-pS-JM9" id="fUL-hk-yDD"/>
@@ -4613,7 +4634,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Cev-pZ-k4W"/>
+        <segue reference="OLg-f6-OIJ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBlueColor">
