@@ -32,11 +32,11 @@ class StudentCreateViewController: UIViewController {
     @IBOutlet weak var addressCountryTF: UITextField!
     @IBOutlet weak var addressPincodeTF: UITextField!
     
-    @IBOutlet weak var registrationNoTF: UITextField!
+    @IBOutlet weak var registrationNumberTF: UITextField!
     @IBOutlet weak var programTF: UITextField!
     @IBOutlet weak var branchTF: UITextField!
     @IBOutlet weak var schoolTF: UITextField!
-    @IBOutlet weak var isHostellerTF: UITextField!
+    @IBOutlet weak var hostellerTF: UITextField!
     @IBOutlet weak var graduatingYearTF: UITextField!
     
     /// **ERROR LABELS**
@@ -90,7 +90,7 @@ class StudentCreateViewController: UIViewController {
     /// - returns: [UITextField]
     func getTextFieldsArray() -> [UITextField]
     {
-        let textFieldsArray : [UITextField] = [firstNameTF, middleNameTF, lastNameTF, genderTF, dobYearTF, dobMonthTF, dobDayTF, emailTF, mobileTF, addressHouseNoTF, addressAreaTF, addressCityTF, addressStateTF, addressCountryTF, addressPincodeTF, registrationNoTF, programTF, branchTF, schoolTF, isHostellerTF, graduatingYearTF]
+        let textFieldsArray : [UITextField] = [firstNameTF, middleNameTF, lastNameTF, genderTF, dobYearTF, dobMonthTF, dobDayTF, emailTF, mobileTF, addressHouseNoTF, addressAreaTF, addressCityTF, addressStateTF, addressCountryTF, addressPincodeTF, registrationNumberTF, programTF, branchTF, schoolTF, hostellerTF, graduatingYearTF]
         return textFieldsArray
     }
     
@@ -175,7 +175,7 @@ class StudentCreateViewController: UIViewController {
         // This is defining and initializing an variable according to a condition.
         var studentIsHosteller : String
         {
-            if(isHostellerTF.text == "Y" || isHostellerTF.text == "y" || isHostellerTF.text == "yes" || isHostellerTF.text == "YES" || isHostellerTF.text == "Yes")
+            if(hostellerTF.text == "Y" || hostellerTF.text == "y" || hostellerTF.text == "yes" || hostellerTF.text == "YES" || hostellerTF.text == "Yes")
             {
                 return "YES"
             }
@@ -189,11 +189,11 @@ class StudentCreateViewController: UIViewController {
                                 Email: emailTF.text!,
                                 MobileNumber: mobileTF.text!,
                                 Address: studentAddress,
-                                RegistrationNumber: registrationNoTF.text!,
+                                RegistrationNumber: registrationNumberTF.text!,
                                 Program: programTF.text!,
                                 Branch: branchTF.text!,
                                 School: schoolTF.text!,
-                                IsHosteller: isHostellerTF.text!,
+                                IsHosteller: hostellerTF.text!,
                                 GraduatingYear: graduatingYearTF.text!)
     }
     

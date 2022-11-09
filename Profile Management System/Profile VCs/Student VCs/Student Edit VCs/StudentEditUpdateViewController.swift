@@ -75,6 +75,32 @@ class StudentEditUpdateViewController: UIViewController {
     /// variable to store the instance of the student that is being edited.
     var studentToEdit : Student = students[indexOfStudentProfileToEdit]
     
+    /// This function returns an array of all the TextFields in this View(Class).
+    /// The elements are arranged in order respective to the View.
+    /// - returns: [UITextField]
+    func getTextFieldsArray() -> [UITextField]
+    {
+        return [firstNameTF, middleNameTF, lastNameTF, genderTF, dobYearTF, dobMonthTF, dobDayTF, emailTF, mobileTF, addressHouseNoTF, addressAreaTF, addressCityTF, addressStateTF, addressCountryTF, addressPincodeTF, registrationNumberTF, programTF, branchTF, schoolTF, hostellerTF, graduatingYearTF]
+    }
+    
+    /// This function returns array of all the Labels in this View(Class).
+    /// The elements are arranged in order with respective to the View.
+    /// - returns: [UILabel]
+    func getErrorLabelsArray() -> [UILabel]
+    {
+        return [firstNameErrorLabel, middleNameErrorLabel, lastNameErrorLabel, genderErrorLabel, dobYearErrorLabel, dobMonthErrorLabel, dobDayErrorLabel, emailErrorLabel, mobileErrorLabel, addressHouseNoErrorLabel, addressAreaErrorLabel, addressCityErrorLabel, addressStateErrorLabel, addressCountryErrorLabel, addressPincodeErrorLabel, studentRegistrationNoErrorLabel, studentProgramErrorLabel, studentBranchErrorLabel, studentSchoolErrorLabel, studentHostellerErrorLabel, studentGraduatingYearErrorLabel]
+    }
+    
+    /// This function resets all the error labels.
+    /// It resets all the labels to "".
+    func resetErrorLabels()
+    {
+        for errorLabel in getErrorLabelsArray()
+        {
+            errorLabel.text = ""
+        }
+    }
+    
     
     
     /// Function to set the text fields text to old(current) values of the student's properties.
@@ -101,6 +127,27 @@ class StudentEditUpdateViewController: UIViewController {
         schoolTF.text = studentToEdit.getSchool()
         hostellerTF.text = studentToEdit.getIsHosteller()
         graduatingYearTF.text = String(studentToEdit.getGraduatingYear())
+    }
+    
+    
+    
+    /// This function checks if any of the text field is empty.
+    /// /// If any field is empty then changes the error label of the respective field to "Empty".
+    /// - returns: true if none of the text firlds are empty. false if any of the text field is empty.
+    func isAnyFieldEmpty() -> Bool
+    {
+        var isFieldEmpty : Bool = false
+        var index = 0;
+        for textField in getTextFieldsArray()
+        {
+            if(!textField.hasText)
+            {
+                getErrorLabelsArray()[index].text = "Empty"
+                isFieldEmpty = true
+            }
+            index+=1
+        }
+        return isFieldEmpty
     }
     
     
@@ -149,19 +196,9 @@ class StudentEditUpdateViewController: UIViewController {
         
         /// This sets the text fields' texts to the current(default or old) values of the student profile.
         setTextFieldsText()
-    }
-    
-    
-    
-    /// This function checks if any of the text field is empty.
-    /// - returns: true if none of the text firlds are empty. false if any of the text field is empty.
-    func isAnyFieldEmpty() -> Bool
-    {
-        if(firstNameTF.hasText && middleNameTF.hasText && lastNameTF.hasText && genderTF.hasText && dobYearTF.hasText && dobMonthTF.hasText && dobDayTF.hasText && emailTF.hasText && mobileTF.hasText && addressHouseNoTF.hasText && addressAreaTF.hasText && addressCityTF.hasText && addressStateTF.hasText && addressCountryTF.hasText && addressPincodeTF.hasText && registrationNumberTF.hasText && programTF.hasText && branchTF.hasText && schoolTF.hasText && hostellerTF.hasText && graduatingYearTF.hasText)
-        {
-            return false
-        }
-        return true
+        
+        /// This resets the error labels to "".
+        resetErrorLabels()
     }
     
     

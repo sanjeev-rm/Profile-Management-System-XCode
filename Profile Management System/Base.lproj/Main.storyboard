@@ -1821,7 +1821,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vcR-vf-Fuy">
-                                <rect key="frame" x="20" y="174" width="374" height="688"/>
+                                <rect key="frame" x="20" y="122" width="374" height="740"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rGL-Pc-qNr">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="1209.5"/>
@@ -2225,7 +2225,7 @@
                             <constraint firstItem="p6a-cT-DwV" firstAttribute="trailing" secondItem="vcR-vf-Fuy" secondAttribute="trailing" constant="20" id="hvW-AN-a7y"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" prompt="Prompt" id="hpk-WB-SnF"/>
+                    <navigationItem key="navigationItem" title="Title" prompt="Prompt" largeTitleDisplayMode="never" id="hpk-WB-SnF"/>
                     <connections>
                         <outlet property="addressLabel" destination="Olt-sx-6sG" id="4g8-FB-Dvq"/>
                         <outlet property="branchLabel" destination="FEZ-fc-7mD" id="m5f-Ze-b7f"/>
@@ -3088,7 +3088,7 @@
                             <constraint firstItem="o5X-55-fYi" firstAttribute="bottom" secondItem="bqV-Bs-DfZ" secondAttribute="bottom" id="njD-yZ-NdD"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Update Profile" prompt="Edit Profile" id="o6w-PJ-zcD"/>
+                    <navigationItem key="navigationItem" title="Update Profile" prompt="Edit Profile" largeTitleDisplayMode="never" id="o6w-PJ-zcD"/>
                     <connections>
                         <outlet property="addressAreaErrorLabel" destination="aZ8-lK-5S8" id="YeC-mo-a2o"/>
                         <outlet property="addressAreaTF" destination="LJC-gk-TGF" id="GYR-jQ-nF7"/>
@@ -4608,7 +4608,7 @@
                         <outlet property="genderErrorLabel" destination="Mkk-qw-F35" id="2nK-Ft-Bkm"/>
                         <outlet property="genderTF" destination="VcI-bq-S4v" id="gWP-K9-VWv"/>
                         <outlet property="graduatingYearTF" destination="goM-C5-KoP" id="xsG-ZV-Irh"/>
-                        <outlet property="isHostellerTF" destination="GdB-sF-Bdx" id="hD4-gl-Pt8"/>
+                        <outlet property="hostellerTF" destination="GdB-sF-Bdx" id="hD4-gl-Pt8"/>
                         <outlet property="lastNameErrorLabel" destination="3gg-nM-knv" id="utX-IQ-8TX"/>
                         <outlet property="lastNameTF" destination="a2h-6f-DwN" id="oSC-t5-dkI"/>
                         <outlet property="messageLabel" destination="wLk-gu-PMV" id="tgh-6Y-q0O"/>
@@ -4617,7 +4617,7 @@
                         <outlet property="mobileErrorLabel" destination="iYm-WC-vsq" id="qak-n0-AlP"/>
                         <outlet property="mobileTF" destination="a5o-qw-rUy" id="seK-8S-rCV"/>
                         <outlet property="programTF" destination="xux-VK-slX" id="cOP-mJ-0RY"/>
-                        <outlet property="registrationNoTF" destination="KS0-zU-VXp" id="SAD-S4-357"/>
+                        <outlet property="registrationNumberTF" destination="KS0-zU-VXp" id="SAD-S4-357"/>
                         <outlet property="schoolTF" destination="f7O-Ff-bbl" id="QdV-8K-bcu"/>
                         <outlet property="studentBranchErrorLabel" destination="qe0-IK-jxu" id="Irz-oL-fD1"/>
                         <outlet property="studentGraduatingYearErrorLabel" destination="ivP-pg-ToX" id="mhw-XW-aE6"/>
