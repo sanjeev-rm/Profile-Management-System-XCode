@@ -239,7 +239,7 @@ class StudentCreateViewController: UIViewController {
             }
             catch DateError.invalidDayError
             {
-                dobYearErrorLabel.text = "Invalid Day of month [valid : 1 - 31 / 29]"
+                dobDayErrorLabel.text = "Invalid Day of month [valid : 1 - 31 / 29]"
                 messageLabel.text = "Please check your DOB"
             }
             catch DateError.typeMismatchError
