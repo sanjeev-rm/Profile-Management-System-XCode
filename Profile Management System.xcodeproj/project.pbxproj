@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C720F18929201A8000DB234F /* FacultyValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C720F18829201A8000DB234F /* FacultyValidator.swift */; };
+		C720F18B29201B4E00DB234F /* FacultyErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C720F18A29201B4E00DB234F /* FacultyErrors.swift */; };
 		C7335B3629116259008739E6 /* DateValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7335B3529116259008739E6 /* DateValidator.swift */; };
 		C7335B382912B424008739E6 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7335B372912B424008739E6 /* EmailValidator.swift */; };
 		C7335B3A2912B4FC008739E6 /* MobileValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7335B392912B4FC008739E6 /* MobileValidator.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C720F18829201A8000DB234F /* FacultyValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacultyValidator.swift; sourceTree = "<group>"; };
+		C720F18A29201B4E00DB234F /* FacultyErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacultyErrors.swift; sourceTree = "<group>"; };
 		C7335B3529116259008739E6 /* DateValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValidator.swift; sourceTree = "<group>"; };
 		C7335B372912B424008739E6 /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		C7335B392912B4FC008739E6 /* MobileValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileValidator.swift; sourceTree = "<group>"; };
@@ -89,12 +93,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C720F18729201A4400DB234F /* FacultyValidator */ = {
+			isa = PBXGroup;
+			children = (
+				C720F18829201A8000DB234F /* FacultyValidator.swift */,
+			);
+			path = FacultyValidator;
+			sourceTree = "<group>";
+		};
 		C7335B3329116174008739E6 /* Validators */ = {
 			isa = PBXGroup;
 			children = (
 				C7335B7629164E32008739E6 /* Validators.swift */,
 				C7335B3429116221008739E6 /* PersonValidator */,
 				C7335B4029142CA2008739E6 /* StudentValidator */,
+				C720F18729201A4400DB234F /* FacultyValidator */,
 			);
 			path = Validators;
 			sourceTree = "<group>";
@@ -279,9 +292,10 @@
 		C78C102F290FEBF50095BE85 /* Errors */ = {
 			isa = PBXGroup;
 			children = (
-				C78C1030290FEC210095BE85 /* PersonErrors.swift */,
 				C78C10322910023C0095BE85 /* Errors.swift */,
+				C78C1030290FEC210095BE85 /* PersonErrors.swift */,
 				C7335B3E29142BEF008739E6 /* StudentErrors.swift */,
+				C720F18A29201B4E00DB234F /* FacultyErrors.swift */,
 			);
 			path = Errors;
 			sourceTree = "<group>";
@@ -383,6 +397,8 @@
 				C7335B7729164E32008739E6 /* Validators.swift in Sources */,
 				C78C1014290BBBA00095BE85 /* StudentEditViewController.swift in Sources */,
 				C78C100B290BA8AA0095BE85 /* Student.swift in Sources */,
+				C720F18929201A8000DB234F /* FacultyValidator.swift in Sources */,
+				C720F18B29201B4E00DB234F /* FacultyErrors.swift in Sources */,
 				C78C1003290A03010095BE85 /* EmployeeViewController.swift in Sources */,
 				C78C1018290CC37A0095BE85 /* GlobalVariables.swift in Sources */,
 				C74C844E2900795800FB7754 /* SceneDelegate.swift in Sources */,

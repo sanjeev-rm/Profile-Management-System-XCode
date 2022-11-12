@@ -12,7 +12,7 @@ class Faculty : Person
     private var facultyId : String
     private var Designation : String
     private var school : String
-    private var department: String
+    private var department : String
     private var dateOfJoining : Date
     private var yearsOfExperience : Int
     
