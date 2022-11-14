@@ -7,17 +7,15 @@
 
 import Foundation
 
-enum FacultySchoolError : Error
+/// Contains errors of properties of a Faculty.
+enum FacultyError : Error
 {
+    /// Error for when the school of faculty is invalid.
     case invalidSchoolError
-}
-
-enum FacultyDepartmentError : Error
-{
+    /// Error for when the department of faculty is invalid.
     case invalidDepartmentError
-}
-
-enum FacultyYearsOfExperienceError : Error
-{
+    /// Error for when the date of joingin of faculty is invalid.
+    case invalidDateOfJoiningError
+    /// Error for when the years of experience of faculty is invalid.
     case invalidYearsOfExperienceError
 }
